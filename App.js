@@ -4,6 +4,8 @@ import {NavigationContainer, StackActions} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Octicons from 'react-native-vector-icons/Octicons';
 import antDesign from 'react-native-vector-icons/AntDesign';
+import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
+import EvilIcons from 'react-native-vector-icons/EvilIcons';
 import {
   Text,
   View,
@@ -50,12 +52,12 @@ const NavigatorScreen = ({navigation}) => {
         onPress={() => navigation.navigate('hello')}
       />
       <Button
-        title="Payment Method"
-        onPress={() => navigation.navigate('hello')}
+        title="Choose Payment Method"
+        onPress={() => navigation.navigate('Choose Payment Method Screen')}
       />
       <Button
-        title="Add Payment"
-        onPress={() => navigation.navigate('hello')}
+        title="Add Payment Method"
+        onPress={() => navigation.navigate('Add Payment Method Screen')}
       />
       <Button title="Settings" onPress={() => navigation.navigate('hello')} />
       <Button
@@ -65,7 +67,7 @@ const NavigatorScreen = ({navigation}) => {
     </View>
   );
 };
-const WelcomeScreen = () => {
+const WelcomeScreen = ({navigation}) => {
   return (
     <View style={styles.Background}>
       <View style={styles.WelcomeContainer}>
@@ -82,7 +84,7 @@ const WelcomeScreen = () => {
           justifyContent: 'flex-start',
           marginBottom: '10%',
         }}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Sign in Screen')}>
           <View
             style={{
               backgroundColor: '#3B3A41',
@@ -118,7 +120,8 @@ const WelcomeScreen = () => {
             position: 'absolute',
             left: 50,
           }}>
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('Sign up Screen')}>
             <Text
               style={{
                 color: '#393840',
@@ -206,7 +209,7 @@ const SignInScreen = ({navigation}) => {
           />
         </View>
       </View>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate('Sign up Screen')}>
         <View
           style={{
             flexDirection: 'row',
@@ -362,7 +365,7 @@ const SignUpScreen = ({navigation}) => {
           />
         </View>
       </View>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate('Sign in Screen')}>
         <View
           style={{
             flexDirection: 'row',
@@ -396,7 +399,7 @@ const SignUpScreen = ({navigation}) => {
           justifyContent: 'center',
           marginBottom: '10%',
         }}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('OTP Screen')}>
           <View
             style={{
               backgroundColor: 'white',
@@ -1348,6 +1351,500 @@ const ViewRequestScreen = ({navigation}) => {
     </ScrollView>
   );
 };
+const ChoosePaymentScreen = ({navigation}) => {
+  return (
+    <View style={styles.Background}>
+      <TouchableOpacity
+        onPress={() => navigation.dispatch(StackActions.pop(1))}>
+        <View style={{marginLeft: '5%', marginTop: '5%', flexDirection: 'row'}}>
+          <Ionicons name={'arrow-back-sharp'} size={25} color={'white'} />
+          <Text
+            style={{
+              color: '#FFFFFF',
+              fontFamily: 'Outfit-SemiBold',
+              fontSize: 24,
+              marginLeft: '15%',
+              marginTop: '-1%',
+            }}>
+            Choose Payment
+          </Text>
+        </View>
+      </TouchableOpacity>
+      <View
+        style={{
+          margin: '5%',
+          flexDirection: 'row',
+          justifyContent: 'center',
+          marginTop: '0%',
+        }}>
+        <Text
+          style={{
+            color: '#FFFFFF',
+            fontFamily: 'Outfit-Regular',
+            fontSize: 13,
+          }}>
+          List of all your credit cards
+        </Text>
+      </View>
+      <View style={{alignItems: 'center'}}>
+        <View
+          style={{
+            height: 161,
+            width: 261,
+            borderRadius: 20,
+            backgroundColor: '#FFFFFF',
+            alignItems: 'center',
+            margin: '7%',
+          }}>
+          <Image
+            source={require('./assets/images/paymentPicture.png')}
+            style={{width: 227, height: 161}}
+          />
+        </View>
+        <View
+          style={{
+            height: 161,
+            width: 261,
+            borderRadius: 27,
+            backgroundColor: '#2F2121',
+            alignItems: 'center',
+            margin: '7%',
+          }}>
+          <Image
+            source={require('./assets/images/Mastercard.png')}
+            style={{height: 25, width: 45, marginLeft: '75%', marginTop: '10%'}}
+          />
+          <View
+            style={{
+              flexDirection: 'row',
+              marginTop: '10%',
+              marginLeft: '7.5%',
+            }}>
+            <View>
+              <Text
+                style={{
+                  color: '#FFFFFF',
+                  fontFamily: 'Outfit-Regular',
+                  fontSize: 13,
+                }}>
+                3254-6754-0001-5654
+              </Text>
+            </View>
+            <View style={{marginLeft: '20%'}}>
+              <Text
+                style={{
+                  color: '#FFFFFF',
+                  fontFamily: 'Outfit-Regular',
+                  fontSize: 13,
+                  marginLeft: '10%',
+                }}>
+                12/24
+              </Text>
+              <Text
+                style={{
+                  color: '#E56033',
+                  fontFamily: 'Outfit-Regular',
+                  fontSize: 10,
+                }}>
+                Valid Thru
+              </Text>
+            </View>
+          </View>
+          <View
+            style={{
+              height: 40,
+              width: 262,
+              backgroundColor: '#E5B8EC',
+              borderBottomRightRadius: 27,
+              borderBottomLeftRadius: 27,
+              justifyContent: 'center',
+              alignItems: 'center',
+              marginTop: '4.3%',
+              flexDirection: 'row',
+            }}>
+            <Text
+              style={{
+                color: '#FFFFFF',
+                fontFamily: 'Outfit-Regular',
+                fontSize: 16,
+                marginRight: '50%',
+              }}>
+              John Deaf
+            </Text>
+            <TouchableOpacity>
+              <Octicons name={'pencil'} size={18} color={'black'} />
+            </TouchableOpacity>
+          </View>
+        </View>
+        <View style={{flexDirection: 'row'}}>
+          <View
+            style={{
+              height: 8,
+              width: 8,
+              borderRadius: 8,
+              backgroundColor: '#E56033',
+              marginRight: '3%',
+            }}
+          />
+          <View
+            style={{
+              height: 8,
+              width: 8,
+              borderRadius: 8,
+              backgroundColor: '#9F9494',
+              marginRight: '3%',
+            }}
+          />
+          <View
+            style={{
+              height: 8,
+              width: 8,
+              borderRadius: 8,
+              backgroundColor: '#9F9494',
+              marginRight: '3%',
+            }}
+          />
+          <View
+            style={{
+              height: 8,
+              width: 8,
+              borderRadius: 8,
+              backgroundColor: '#9F9494',
+            }}
+          />
+        </View>
+        <TouchableOpacity>
+          <View
+            style={{
+              width: 261,
+              height: 50,
+              marginTop: '25%',
+              borderRadius: 51,
+              borderWidth: 1,
+              borderColor: '#E56033',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}>
+            <Text
+              style={{
+                fontFamily: 'Outfit-Regular',
+                color: '#FFFFFF',
+                fontSize: 16,
+              }}>
+              Select
+            </Text>
+          </View>
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <View style={{flexDirection: 'row', margin: '7%'}}>
+            <AntDesign
+              name={'pluscircleo'}
+              size={10}
+              color={'#FFFFFF'}
+              style={{marginTop: '2%'}}
+            />
+            <Text
+              style={{
+                fontFamily: 'Outfit-Regular',
+                color: '#FFFFFF',
+                fontSize: 13,
+                marginLeft: ' 5%',
+              }}>
+              Add a new payment method
+            </Text>
+          </View>
+        </TouchableOpacity>
+      </View>
+    </View>
+  );
+};
+const AddPaymentScreen = ({navigation}) => {
+  return (
+    <View style={styles.Background}>
+      <TouchableOpacity
+        onPress={() => navigation.dispatch(StackActions.pop(1))}>
+        <View style={{marginLeft: '5%', marginTop: '5%', flexDirection: 'row'}}>
+          <Ionicons name={'arrow-back-sharp'} size={25} color={'white'} />
+          <Text
+            style={{
+              color: '#FFFFFF',
+              fontFamily: 'Outfit-SemiBold',
+              fontSize: 24,
+              marginLeft: '10%',
+              marginTop: '-1%',
+            }}>
+            Add Payment Method
+          </Text>
+        </View>
+      </TouchableOpacity>
+      <View
+        style={{
+          margin: '5%',
+          flexDirection: 'row',
+          justifyContent: 'center',
+          marginTop: '0%',
+        }}>
+        <Text
+          style={{
+            color: '#FFFFFF',
+            fontFamily: 'Outfit-Regular',
+            fontSize: 13,
+          }}>
+          Provide your credit card information
+        </Text>
+      </View>
+      <View style={{alignItems: 'center'}}>
+        <View
+          style={{
+            height: 161,
+            width: 261,
+            borderRadius: 20,
+            backgroundColor: '#FFFFFF',
+            alignItems: 'center',
+            margin: '7%',
+          }}>
+          <Image
+            source={require('./assets/images/paymentPicture.png')}
+            style={{width: 227, height: 161}}
+          />
+        </View>
+        <View
+          style={{
+            width: '67%',
+            height: '17%',
+            marginTop: '10%',
+          }}>
+          <Text
+            style={{
+              color: '#FFFFFF',
+              fontFamily: 'Outfit-SemiBold',
+              fontSize: 16,
+            }}>
+            Card number
+          </Text>
+          <View
+            style={{
+              height: 41,
+              width: 261,
+              borderWidth: 1,
+              borderColor: '#393840',
+              borderRadius: 67,
+              marginTop: '3%',
+              justifyContent: 'center',
+            }}>
+            <View style={{flexDirection: 'row', alignItems: 'center'}}>
+              <Image
+                source={require('./assets/images/Mastercard.png')}
+                style={{
+                  height: 25,
+                  width: 45,
+                  marginLeft: '4%',
+                }}
+              />
+              <TextInput
+                style={{
+                  color: '#FFFFFF',
+                  fontFamily: 'Outfit-Regular',
+                  fontSize: 13,
+                  marginLeft: '4.5%',
+                  marginRight: '1%',
+                  width: '65%',
+                }}
+                placeholder={'3254-6754-0001-5654'}
+                placeholderTextColor={'#FFFFFF'}
+                inputMode={'numeric'}
+                maxLength={16}
+              />
+              <Ionicons name={'ios-keypad-outline'} size={12} color={'white'} />
+            </View>
+          </View>
+        </View>
+        <View
+          style={{
+            width: '67%',
+            height: '15%',
+          }}>
+          <View style={{flexDirection: 'row'}}>
+            <Text
+              style={{
+                color: '#FFFFFF',
+                fontFamily: 'Outfit-SemiBold',
+                fontSize: 16,
+                marginRight: '38%',
+              }}>
+              Expiration date
+            </Text>
+            <Text
+              style={{
+                color: '#FFFFFF',
+                fontFamily: 'Outfit-SemiBold',
+                fontSize: 16,
+              }}>
+              CVV
+            </Text>
+          </View>
+          <View
+            style={{
+              flexDirection: 'row',
+              marginTop: '3%',
+            }}>
+            <View
+              style={{
+                height: 41,
+                width: 65,
+                borderWidth: 1,
+                borderColor: '#393840',
+                borderRadius: 67,
+                marginTop: '3%',
+                justifyContent: 'center',
+                marginRight: '4%',
+              }}>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}>
+                <TextInput
+                  style={{
+                    color: '#FFFFFF',
+                    fontFamily: 'Outfit-Regular',
+                    fontSize: 13,
+                    marginLeft: '4%',
+                  }}
+                  placeholder={'05'}
+                  placeholderTextColor={'#FFFFFF'}
+                  inputMode={'numeric'}
+                  maxLength={2}
+                />
+                <View style={{marginLeft: '8%'}}>
+                  <SimpleLineIcons name={'arrow-up'} size={6} color={'white'} />
+                  <SimpleLineIcons
+                    name={'arrow-down'}
+                    size={6}
+                    color={'white'}
+                    style={{marginTop: '-10%'}}
+                  />
+                </View>
+              </View>
+            </View>
+            <Text
+              style={{
+                color: '#FFFFFF',
+                fontFamily: 'Outfit-Regular',
+                fontSize: 16,
+                marginTop: '7%',
+                marginRight: '4%',
+              }}>
+              /
+            </Text>
+            <View
+              style={{
+                height: 41,
+                width: 86,
+                borderWidth: 1,
+                borderColor: '#393840',
+                borderRadius: 67,
+                marginTop: '3%',
+                justifyContent: 'center',
+                marginRight: '7%',
+              }}>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}>
+                <TextInput
+                  style={{
+                    color: '#FFFFFF',
+                    fontFamily: 'Outfit-Regular',
+                    fontSize: 13,
+                    marginLeft: '4%',
+                  }}
+                  placeholder={'2027'}
+                  placeholderTextColor={'#FFFFFF'}
+                  inputMode={'numeric'}
+                  maxLength={4}
+                />
+                <View style={{marginLeft: '8%'}}>
+                  <SimpleLineIcons name={'arrow-up'} size={6} color={'white'} />
+                  <SimpleLineIcons
+                    name={'arrow-down'}
+                    size={6}
+                    color={'white'}
+                    style={{marginTop: '-10%'}}
+                  />
+                </View>
+              </View>
+            </View>
+            <View
+              style={{
+                height: 41,
+                width: 65,
+                borderWidth: 1,
+                borderColor: '#393840',
+                borderRadius: 67,
+                marginTop: '3%',
+                justifyContent: 'center',
+              }}>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}>
+                <TextInput
+                  style={{
+                    color: '#FFFFFF',
+                    fontFamily: 'Outfit-Regular',
+                    fontSize: 13,
+                    marginLeft: '4%',
+                  }}
+                  placeholder={'843'}
+                  placeholderTextColor={'#FFFFFF'}
+                  inputMode={'numeric'}
+                  maxLength={3}
+                />
+                <TouchableOpacity>
+                  <Ionicons
+                    name={'ios-keypad-outline'}
+                    size={12}
+                    color={'white'}
+                  />
+                </TouchableOpacity>
+              </View>
+            </View>
+          </View>
+        </View>
+
+        <TouchableOpacity>
+          <View
+            style={{
+              width: 261,
+              height: 50,
+              marginTop: '20%',
+              borderRadius: 51,
+              borderWidth: 1,
+              borderColor: '#E56033',
+              backgroundColor: '#E56033',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}>
+            <Text
+              style={{
+                fontFamily: 'Outfit-Regular',
+                color: '#FFFFFF',
+                fontSize: 16,
+              }}>
+              Submit
+            </Text>
+          </View>
+        </TouchableOpacity>
+      </View>
+    </View>
+  );
+};
 const App = () => {
   return (
     <NavigationContainer>
@@ -1393,16 +1890,16 @@ const App = () => {
         {/*  component={OTPScreen}*/}
         {/*  options={{headerShown: false}}*/}
         {/*/>*/}
-        {/*<Stack.Screen*/}
-        {/*  name="OTP Screen"*/}
-        {/*  component={OTPScreen}*/}
-        {/*  options={{headerShown: false}}*/}
-        {/*/>*/}
-        {/*<Stack.Screen*/}
-        {/*  name="OTP Screen"*/}
-        {/*  component={OTPScreen}*/}
-        {/*  options={{headerShown: false}}*/}
-        {/*/>*/}
+        <Stack.Screen
+          name="Choose Payment Method Screen"
+          component={ChoosePaymentScreen}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Add Payment Method Screen"
+          component={AddPaymentScreen}
+          options={{headerShown: false}}
+        />
         {/*<Stack.Screen*/}
         {/*  name="OTP Screen"*/}
         {/*  component={OTPScreen}*/}
