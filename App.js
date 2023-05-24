@@ -6,6 +6,7 @@ import Octicons from 'react-native-vector-icons/Octicons';
 import antDesign from 'react-native-vector-icons/AntDesign';
 import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
+
 import {
   Text,
   View,
@@ -41,7 +42,7 @@ const NavigatorScreen = ({navigation}) => {
         onPress={() => navigation.navigate('Sign up Screen')}
       />
       <Button title="OTP" onPress={() => navigation.navigate('OTP Screen')} />
-      <Button title="Cart" onPress={() => navigation.navigate('hello')} />
+      <Button title="Cart" onPress={() => navigation.navigate('Cart Screen')} />
       <Button title="Home" onPress={() => navigation.navigate('hello')} />
       <Button
         title="Buying Records"
@@ -1845,6 +1846,275 @@ const AddPaymentScreen = ({navigation}) => {
     </View>
   );
 };
+const CartScreen = ({navigation}) => {
+  return (
+    <View style={styles.Background}>
+      <View style={{marginLeft: '5%', marginTop: '5%', flexDirection: 'row'}}>
+        <TouchableOpacity
+          onPress={() => navigation.dispatch(StackActions.pop(1))}>
+          <Ionicons name={'arrow-back-sharp'} size={25} color={'white'} />
+        </TouchableOpacity>
+        <Text
+          style={{
+            color: '#FFFFFF',
+            fontFamily: 'Outfit-SemiBold',
+            fontSize: 24,
+            marginLeft: '31.5%',
+            marginTop: '-1%',
+          }}>
+          CART
+        </Text>
+        <Image
+          source={require('./assets/images/ShoppingCart.png')}
+          style={{height: 25, width: 25, marginLeft: '1%', marginTop: '0.25%'}}
+        />
+      </View>
+
+      <View
+        style={{
+          margin: '5%',
+          marginTop: '2%',
+          marginLeft: '17%',
+          width: '66.5%',
+          backgroundColor: '#E56033',
+          height: '0.25%',
+        }}
+      />
+
+      <View style={{alignItems: 'center'}}>
+        <View
+          style={{
+            width: '67%',
+          }}>
+          {/*1st listing*/}
+          <View
+            style={{
+              height: 78,
+              width: 261,
+              borderWidth: 1,
+              borderColor: '#393840',
+              borderRadius: 7,
+              marginVertical: '8%',
+              justifyContent: 'center',
+            }}>
+            <View style={{flexDirection: 'row', alignItems: 'center'}}>
+              <Image
+                source={require('./assets/images/rtx4090.png')}
+                style={{
+                  height: 50,
+                  width: 70,
+                  marginLeft: '4%',
+                }}
+              />
+              <View
+                style={{
+                  flexDirection: 'column',
+                  marginLeft: '4%',
+                  marginRight: '10%',
+                }}>
+                <Text
+                  style={{
+                    color: '#FFFFFF',
+                    fontFamily: 'Outfit-Bold',
+                    fontSize: 13,
+                  }}>
+                  RTX 4090
+                </Text>
+                <Text
+                  style={{
+                    color: '#FFFFFF',
+                    fontFamily: 'Outfit-Regular',
+                    fontSize: 10,
+                  }}>
+                  Rs 14,00,000
+                </Text>
+              </View>
+              <AntDesign name={'pluscircleo'} size={20} color={'white'} />
+              <Text
+                style={{
+                  color: '#FFFFFF',
+                  fontFamily: 'Outfit-Bold',
+                  fontSize: 15,
+                  marginHorizontal: '4%',
+                }}>
+                2
+              </Text>
+              <AntDesign name={'minuscircleo'} size={20} color={'white'} />
+            </View>
+          </View>
+          {/*2nd listing*/}
+          <View
+            style={{
+              height: 78,
+              width: 261,
+              borderWidth: 1,
+              borderColor: '#393840',
+              borderRadius: 7,
+              marginVertical: '8%',
+              justifyContent: 'center',
+            }}>
+            <View style={{flexDirection: 'row', alignItems: 'center'}}>
+              <Image
+                source={require('./assets/images/rtx4090.png')}
+                style={{
+                  height: 50,
+                  width: 70,
+                  marginLeft: '4%',
+                }}
+              />
+              <View
+                style={{
+                  flexDirection: 'column',
+                  marginLeft: '4%',
+                  marginRight: '10%',
+                }}>
+                <Text
+                  style={{
+                    color: '#FFFFFF',
+                    fontFamily: 'Outfit-Bold',
+                    fontSize: 13,
+                  }}>
+                  RTX 4090
+                </Text>
+                <Text
+                  style={{
+                    color: '#FFFFFF',
+                    fontFamily: 'Outfit-Regular',
+                    fontSize: 10,
+                  }}>
+                  Rs 14,00,000
+                </Text>
+              </View>
+              <AntDesign name={'pluscircleo'} size={20} color={'white'} />
+              <Text
+                style={{
+                  color: '#FFFFFF',
+                  fontFamily: 'Outfit-Bold',
+                  fontSize: 15,
+                  marginHorizontal: '4%',
+                }}>
+                2
+              </Text>
+              <AntDesign name={'minuscircleo'} size={20} color={'white'} />
+            </View>
+          </View>
+          {/*3rd listing*/}
+          <View
+            style={{
+              height: 78,
+              width: 261,
+              borderWidth: 1,
+              borderColor: '#393840',
+              borderRadius: 7,
+              marginVertical: '8%',
+              justifyContent: 'center',
+            }}>
+            <View style={{flexDirection: 'row', alignItems: 'center'}}>
+              <Image
+                source={require('./assets/images/rtx4090.png')}
+                style={{
+                  height: 50,
+                  width: 70,
+                  marginLeft: '4%',
+                }}
+              />
+              <View
+                style={{
+                  flexDirection: 'column',
+                  marginLeft: '4%',
+                  marginRight: '10%',
+                }}>
+                <Text
+                  style={{
+                    color: '#FFFFFF',
+                    fontFamily: 'Outfit-Bold',
+                    fontSize: 13,
+                  }}>
+                  RTX 4090
+                </Text>
+                <Text
+                  style={{
+                    color: '#FFFFFF',
+                    fontFamily: 'Outfit-Regular',
+                    fontSize: 10,
+                  }}>
+                  Rs 14,00,000
+                </Text>
+              </View>
+              <AntDesign name={'pluscircleo'} size={20} color={'white'} />
+              <Text
+                style={{
+                  color: '#FFFFFF',
+                  fontFamily: 'Outfit-Bold',
+                  fontSize: 15,
+                  marginHorizontal: '4%',
+                }}>
+                2
+              </Text>
+              <AntDesign name={'minuscircleo'} size={20} color={'white'} />
+            </View>
+          </View>
+        </View>
+        <View
+          style={{
+            width: '100%',
+            backgroundColor: 'grey',
+            height: 78,
+            justifyContent: 'space-evenly',
+            alignItems: 'center',
+            flexDirection: 'row',
+            marginVertical: '3%',
+          }}>
+          <View>
+            <Text
+              style={{
+                color: '#FFFFFF',
+                fontFamily: 'Outfit-Regular',
+                fontSize: 10,
+              }}>
+              Total
+            </Text>
+            <Text
+              style={{
+                color: '#FFFFFF',
+                fontFamily: 'Outfit-Bold',
+                fontSize: 16,
+              }}>
+              Rs 32,00,000
+            </Text>
+          </View>
+          <TouchableOpacity>
+            <View
+              style={{
+                width: 119,
+                height: 50,
+                borderRadius: 32,
+                borderWidth: 1,
+                borderColor: '#E56033',
+                backgroundColor: '#E56033',
+                alignItems: 'center',
+                justifyContent: 'center',
+                flexDirection: 'row',
+              }}>
+              <Text
+                style={{
+                  fontFamily: 'Outfit-Regular',
+                  color: '#FFFFFF',
+                  fontSize: 14,
+                }}>
+                Checkout
+              </Text>
+              <Image
+                source={require('./assets/images/ArrowRight.png')}
+                style={{height: 20, width: 20, marginLeft: '2%'}}
+              />
+            </View>
+          </TouchableOpacity>
+        </View>
+      </View>
+    </View>
+  );
+};
 const App = () => {
   return (
     <NavigationContainer>
@@ -1870,11 +2140,11 @@ const App = () => {
           component={OTPScreen}
           options={{headerShown: false}}
         />
-        {/*<Stack.Screen*/}
-        {/*  name="OTP Screen"*/}
-        {/*  component={OTPScreen}*/}
-        {/*  options={{headerShown: false}}*/}
-        {/*/>*/}
+        <Stack.Screen
+          name="Cart Screen"
+          component={CartScreen}
+          options={{headerShown: false}}
+        />
         {/*<Stack.Screen*/}
         {/*  name="OTP Screen"*/}
         {/*  component={OTPScreen}*/}
