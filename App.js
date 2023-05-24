@@ -2,10 +2,13 @@ import 'react-native-gesture-handler';
 import React, {useState, useEffect} from 'react';
 import {NavigationContainer, StackActions} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Octicons from 'react-native-vector-icons/Octicons';
 import antDesign from 'react-native-vector-icons/AntDesign';
 import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import AntDesign from 'react-native-vector-icons/AntDesign';
 
 import {
   Text,
@@ -21,10 +24,9 @@ import {
   Keyboard,
   Pressable,
 } from 'react-native';
-import Ionicons from 'react-native-vector-icons/Ionicons';
-import AntDesign from 'react-native-vector-icons/AntDesign';
 
 const Stack = createNativeStackNavigator();
+const Tab = createBottomTabNavigator();
 
 const NavigatorScreen = ({navigation}) => {
   return (
@@ -43,14 +45,14 @@ const NavigatorScreen = ({navigation}) => {
       />
       <Button title="OTP" onPress={() => navigation.navigate('OTP Screen')} />
       <Button title="Cart" onPress={() => navigation.navigate('Cart Screen')} />
-      <Button title="Home" onPress={() => navigation.navigate('hello')} />
+      <Button title="Home" onPress={() => navigation.navigate('Home Screen')} />
       <Button
         title="Buying Records"
-        onPress={() => navigation.navigate('hello')}
+        onPress={() => navigation.navigate('Buying Records Screen')}
       />
       <Button
         title="Selling Records"
-        onPress={() => navigation.navigate('hello')}
+        onPress={() => navigation.navigate('Selling Records Screen')}
       />
       <Button
         title="Choose Payment Method"
@@ -60,7 +62,10 @@ const NavigatorScreen = ({navigation}) => {
         title="Add Payment Method"
         onPress={() => navigation.navigate('Add Payment Method Screen')}
       />
-      <Button title="Settings" onPress={() => navigation.navigate('hello')} />
+      <Button
+        title="Settings"
+        onPress={() => navigation.navigate('Settings Screen')}
+      />
       <Button
         title="View Retailers Request"
         onPress={() => navigation.navigate('View Request Screen')}
@@ -141,12 +146,13 @@ const WelcomeScreen = ({navigation}) => {
 const SignInScreen = ({navigation}) => {
   return (
     <View style={styles.Background}>
-      <TouchableOpacity
-        onPress={() => navigation.dispatch(StackActions.pop(1))}>
-        <View style={{marginLeft: '5%', marginTop: '5%'}}>
+      <View style={{marginLeft: '5%', marginTop: '5%'}}>
+        <TouchableOpacity
+          onPress={() => navigation.dispatch(StackActions.pop(1))}>
           <Ionicons name={'arrow-back-sharp'} size={25} color={'white'} />
-        </View>
-      </TouchableOpacity>
+        </TouchableOpacity>
+      </View>
+
       <View
         style={{
           margin: '5%',
@@ -429,12 +435,13 @@ const SignUpScreen = ({navigation}) => {
 const OTPScreen = ({navigation}) => {
   return (
     <View style={styles.Background}>
-      <TouchableOpacity
-        onPress={() => navigation.dispatch(StackActions.pop(1))}>
-        <View style={{marginLeft: '5%', marginTop: '5%'}}>
+      <View style={{marginLeft: '5%', marginTop: '5%'}}>
+        <TouchableOpacity
+          onPress={() => navigation.dispatch(StackActions.pop(1))}>
           <Ionicons name={'arrow-back-sharp'} size={25} color={'white'} />
-        </View>
-      </TouchableOpacity>
+        </TouchableOpacity>
+      </View>
+
       <View
         style={{
           margin: '5%',
@@ -597,22 +604,22 @@ const ViewRequestScreen = ({navigation}) => {
   return (
     <ScrollView style={styles.Background}>
       <View>
-        <TouchableOpacity
-          onPress={() => navigation.dispatch(StackActions.pop(1))}>
-          <View
-            style={{marginLeft: '5%', marginTop: '5%', flexDirection: 'row'}}>
+        <View style={{marginLeft: '5%', marginTop: '5%', flexDirection: 'row'}}>
+          <TouchableOpacity
+            onPress={() => navigation.dispatch(StackActions.pop(1))}>
             <Ionicons name={'arrow-back-sharp'} size={25} color={'white'} />
-            <Text
-              style={{
-                color: '#FFFFFF',
-                fontFamily: 'Outfit-Bold',
-                fontSize: 24,
-                marginLeft: '20%',
-              }}>
-              View Requests
-            </Text>
-          </View>
-        </TouchableOpacity>
+          </TouchableOpacity>
+          <Text
+            style={{
+              color: '#FFFFFF',
+              fontFamily: 'Outfit-Bold',
+              fontSize: 24,
+              marginLeft: '20%',
+            }}>
+            View Requests
+          </Text>
+        </View>
+
         <View
           style={{
             margin: '5%',
@@ -1355,22 +1362,23 @@ const ViewRequestScreen = ({navigation}) => {
 const ChoosePaymentScreen = ({navigation}) => {
   return (
     <View style={styles.Background}>
-      <TouchableOpacity
-        onPress={() => navigation.dispatch(StackActions.pop(1))}>
-        <View style={{marginLeft: '5%', marginTop: '5%', flexDirection: 'row'}}>
+      <View style={{marginLeft: '5%', marginTop: '5%', flexDirection: 'row'}}>
+        <TouchableOpacity
+          onPress={() => navigation.dispatch(StackActions.pop(1))}>
           <Ionicons name={'arrow-back-sharp'} size={25} color={'white'} />
-          <Text
-            style={{
-              color: '#FFFFFF',
-              fontFamily: 'Outfit-SemiBold',
-              fontSize: 24,
-              marginLeft: '15%',
-              marginTop: '-1%',
-            }}>
-            Choose Payment
-          </Text>
-        </View>
-      </TouchableOpacity>
+        </TouchableOpacity>
+        <Text
+          style={{
+            color: '#FFFFFF',
+            fontFamily: 'Outfit-SemiBold',
+            fontSize: 24,
+            marginLeft: '15%',
+            marginTop: '-1%',
+          }}>
+          Choose Payment
+        </Text>
+      </View>
+
       <View
         style={{
           margin: '5%',
@@ -1562,22 +1570,23 @@ const ChoosePaymentScreen = ({navigation}) => {
 const AddPaymentScreen = ({navigation}) => {
   return (
     <View style={styles.Background}>
-      <TouchableOpacity
-        onPress={() => navigation.dispatch(StackActions.pop(1))}>
-        <View style={{marginLeft: '5%', marginTop: '5%', flexDirection: 'row'}}>
+      <View style={{marginLeft: '5%', marginTop: '5%', flexDirection: 'row'}}>
+        <TouchableOpacity
+          onPress={() => navigation.dispatch(StackActions.pop(1))}>
           <Ionicons name={'arrow-back-sharp'} size={25} color={'white'} />
-          <Text
-            style={{
-              color: '#FFFFFF',
-              fontFamily: 'Outfit-SemiBold',
-              fontSize: 24,
-              marginLeft: '10%',
-              marginTop: '-1%',
-            }}>
-            Add Payment Method
-          </Text>
-        </View>
-      </TouchableOpacity>
+        </TouchableOpacity>
+        <Text
+          style={{
+            color: '#FFFFFF',
+            fontFamily: 'Outfit-SemiBold',
+            fontSize: 24,
+            marginLeft: '10%',
+            marginTop: '-1%',
+          }}>
+          Add Payment Method
+        </Text>
+      </View>
+
       <View
         style={{
           margin: '5%',
@@ -2115,10 +2124,1110 @@ const CartScreen = ({navigation}) => {
     </View>
   );
 };
+const HomeScreen = ({navigation}) => {
+  return (
+    <ScrollView style={styles.Background}>
+      <View
+        style={{
+          marginLeft: '5%',
+          marginTop: '5%',
+          flexDirection: 'row',
+          justifyContent: 'space-around',
+        }}>
+        <Text
+          style={{
+            color: '#FFFFFF',
+            fontFamily: 'Outfit-Bold',
+            fontSize: 22,
+            marginRight: '40%',
+            marginLeft: '-5%',
+          }}>
+          COMERCIO
+        </Text>
+        <TouchableOpacity onPress={() => navigation.navigate('Cart Screen')}>
+          <Image
+            source={require('./assets/images/ShoppingCart.png')}
+            style={{height: 25, width: 25}}
+          />
+        </TouchableOpacity>
+      </View>
+      <View
+        style={{
+          flexDirection: 'row',
+          justifyContent: 'space-around',
+          marginTop: '8%',
+        }}>
+        <View>
+          <TouchableOpacity>
+            <Text
+              style={{
+                color: '#E56033',
+                fontFamily: 'Outfit-Regular',
+                fontSize: 16,
+              }}>
+              Products
+            </Text>
+
+            <View
+              style={{width: 62, height: '4%', backgroundColor: '#E56033'}}
+            />
+          </TouchableOpacity>
+        </View>
+        <TouchableOpacity>
+          <Text
+            style={{
+              color: '#FFFFFF',
+              fontFamily: 'Outfit-Regular',
+              fontSize: 16,
+            }}>
+            Manufacturers
+          </Text>
+        </TouchableOpacity>
+      </View>
+      <View style={{alignItems: 'center'}}>
+        <View
+          style={{
+            height: 50,
+            width: 356,
+            borderWidth: 1,
+            borderColor: '#393840',
+            backgroundColor: '#242222',
+            borderRadius: 67,
+            justifyContent: 'center',
+          }}>
+          <View style={{flexDirection: 'row', alignItems: 'center'}}>
+            <TextInput
+              style={{
+                color: '#FFFFFF',
+                fontFamily: 'Outfit-Regular',
+                fontSize: 16,
+                marginLeft: '4.5%',
+                marginRight: '5%',
+                width: '65%',
+              }}
+              placeholder={'Search'}
+              placeholderTextColor={'#FFFFFF'}
+              maxLength={16}
+            />
+            <TouchableOpacity>
+              <Image
+                source={require('./assets/images/Barcode.png')}
+                style={{
+                  height: 24,
+                  width: 24,
+                  marginHorizontal: '3%',
+                }}
+              />
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Image
+                source={require('./assets/images/Search.png')}
+                style={{
+                  height: 24,
+                  width: 24,
+                }}
+              />
+            </TouchableOpacity>
+          </View>
+        </View>
+      </View>
+      <View>
+        <Text
+          style={{
+            color: '#FFFFFF',
+            fontFamily: 'Outfit-Regular',
+            fontSize: 16,
+            marginVertical: '7%',
+            marginLeft: '5.5%',
+          }}>
+          For Business
+        </Text>
+        <View style={{flexDirection: 'row', justifyContent: 'space-evenly'}}>
+          {/*1st card*/}
+          <TouchableOpacity>
+            <View
+              style={{
+                height: 50,
+                width: 97,
+                backgroundColor: '#E56033',
+                borderRadius: 7,
+                alignItems: 'center',
+                justifyContent: 'center',
+                flexDirection: 'row',
+              }}>
+              <Text
+                style={{
+                  color: '#FFFFFF',
+                  fontFamily: 'Outfit-Regular',
+                  fontSize: 10,
+                }}>
+                All {'\n'}Categories
+              </Text>
+              <Image
+                source={require('./assets/images/Category.png')}
+                style={{
+                  height: 24,
+                  width: 24,
+                  marginHorizontal: '2%',
+                }}
+              />
+            </View>
+          </TouchableOpacity>
+          {/*2nd card*/}
+          <TouchableOpacity>
+            <View
+              style={{
+                height: 50,
+                width: 97,
+                borderWidth: 1,
+                borderColor: '#393840',
+                backgroundColor: '#242222',
+                borderRadius: 7,
+                alignItems: 'center',
+                justifyContent: 'center',
+                flexDirection: 'row',
+              }}>
+              <Text
+                style={{
+                  color: '#FFFFFF',
+                  fontFamily: 'Outfit-Regular',
+                  fontSize: 10,
+                }}>
+                Request for {'\n'}Quotation
+              </Text>
+              <Image
+                source={require('./assets/images/Radar2.png')}
+                style={{height: 24, width: 24, marginHorizontal: '2%'}}
+              />
+            </View>
+          </TouchableOpacity>
+          {/*3rd card*/}
+          <TouchableOpacity>
+            <View
+              style={{
+                height: 50,
+                width: 97,
+                backgroundColor: '#E56033',
+                borderRadius: 7,
+                alignItems: 'center',
+                justifyContent: 'center',
+                flexDirection: 'row',
+              }}>
+              <Text
+                style={{
+                  color: '#FFFFFF',
+                  fontFamily: 'Outfit-Regular',
+                  fontSize: 10,
+                }}>
+                Ready {'\n'}to ship
+              </Text>
+              <Image
+                source={require('./assets/images/ShoppingBag.png')}
+                style={{
+                  height: 24,
+                  width: 24,
+                  marginHorizontal: '2%',
+                }}
+              />
+            </View>
+          </TouchableOpacity>
+        </View>
+
+        <TouchableOpacity>
+          <View
+            style={{
+              flexDirection: 'row',
+              marginVertical: '7%',
+              marginLeft: '5.5%',
+              marginRight: '8%',
+              justifyContent: 'space-between',
+            }}>
+            <Text
+              style={{
+                color: '#FFFFFF',
+                fontFamily: 'Outfit-Regular',
+                fontSize: 16,
+              }}>
+              Top Ranking
+            </Text>
+            <Image
+              source={require('./assets/images/ArrowRight.png')}
+              style={{height: 24, width: 24}}
+            />
+          </View>
+        </TouchableOpacity>
+
+        <View style={{flexDirection: 'row', justifyContent: 'space-evenly'}}>
+          <TouchableOpacity>
+            <View
+              style={{
+                backgroundColor: '#3F3F3F',
+                height: 105,
+                width: 100,
+                borderRadius: 7,
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}>
+              <Image
+                source={require('./assets/images/rtx4090.png')}
+                style={{height: 50, width: 80}}
+              />
+              <View>
+                <Text
+                  style={{
+                    color: '#FFFFFF',
+                    fontFamily: 'Outfit-Bold',
+                    fontSize: 10,
+                  }}>
+                  Most Popular
+                </Text>
+                <Text
+                  style={{
+                    color: '#FFFFFF',
+                    fontFamily: 'Outfit-Regular',
+                    fontSize: 10,
+                    marginTop: '-3.5%',
+                  }}>
+                  Graphics Card
+                </Text>
+              </View>
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <View
+              style={{
+                backgroundColor: '#000000',
+                height: 105,
+                width: 100,
+                borderRadius: 7,
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}>
+              <Image
+                source={require('./assets/images/pc.png')}
+                style={{height: 50, width: 60}}
+              />
+              <View style={{alignItems: 'center'}}>
+                <Text
+                  style={{
+                    color: '#FFFFFF',
+                    fontFamily: 'Outfit-Bold',
+                    fontSize: 10,
+                  }}>
+                  Most Popular
+                </Text>
+                <Text
+                  style={{
+                    color: '#FFFFFF',
+                    fontFamily: 'Outfit-Regular',
+                    fontSize: 10,
+                    marginTop: '-3.5%',
+                  }}>
+                  Pc
+                </Text>
+              </View>
+            </View>
+          </TouchableOpacity>
+        </View>
+        <TouchableOpacity>
+          <View
+            style={{
+              flexDirection: 'row',
+              marginVertical: '7%',
+              marginLeft: '7%',
+              marginRight: '8%',
+              justifyContent: 'space-between',
+            }}>
+            <Text
+              style={{
+                color: '#FFFFFF',
+                fontFamily: 'Outfit-Regular',
+                fontSize: 16,
+              }}>
+              New Arrivals
+            </Text>
+            <Image
+              source={require('./assets/images/ArrowRight.png')}
+              style={{height: 24, width: 24}}
+            />
+          </View>
+        </TouchableOpacity>
+
+        <View style={{flexDirection: 'row', justifyContent: 'space-evenly'}}>
+          <TouchableOpacity>
+            <View
+              style={{
+                backgroundColor: '#3F3F3F',
+                height: 105,
+                width: 100,
+                borderRadius: 7,
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}>
+              <Image
+                source={require('./assets/images/rtx4090.png')}
+                style={{height: 50, width: 80}}
+              />
+              <View>
+                <Text
+                  style={{
+                    color: '#FFFFFF',
+                    fontFamily: 'Outfit-Bold',
+                    fontSize: 10,
+                  }}>
+                  Nvidia GPU
+                </Text>
+                <Text
+                  style={{
+                    color: '#FFFFFF',
+                    fontFamily: 'Outfit-Regular',
+                    fontSize: 10,
+                    marginTop: '-3.5%',
+                  }}>
+                  Rs 2,00,000
+                </Text>
+              </View>
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <View
+              style={{
+                backgroundColor: '#000000',
+                height: 105,
+                width: 100,
+                borderRadius: 7,
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}>
+              <Image
+                source={require('./assets/images/pc.png')}
+                style={{height: 50, width: 60}}
+              />
+              <View style={{alignItems: 'center'}}>
+                <Text
+                  style={{
+                    color: '#FFFFFF',
+                    fontFamily: 'Outfit-Bold',
+                    fontSize: 10,
+                  }}>
+                  Gaming PC
+                </Text>
+                <Text
+                  style={{
+                    color: '#FFFFFF',
+                    fontFamily: 'Outfit-Regular',
+                    fontSize: 10,
+                    marginTop: '-3.5%',
+                  }}>
+                  Rs 5,00,000
+                </Text>
+              </View>
+            </View>
+          </TouchableOpacity>
+        </View>
+      </View>
+    </ScrollView>
+  );
+};
+const SellingRecordScreen = ({navigation}) => {
+  return (
+    <View style={styles.Background}>
+      <View style={{marginLeft: '5%', marginTop: '5%', flexDirection: 'row'}}>
+        <TouchableOpacity
+          onPress={() => navigation.dispatch(StackActions.pop(1))}>
+          <Ionicons name={'arrow-back-sharp'} size={25} color={'white'} />
+        </TouchableOpacity>
+        <Text
+          style={{
+            color: '#FFFFFF',
+            fontFamily: 'Outfit-SemiBold',
+            fontSize: 24,
+            marginLeft: '20.5%',
+            marginTop: '-1%',
+          }}>
+          Selling Records
+        </Text>
+      </View>
+      <View
+        style={{
+          alignItems: 'center',
+          flexDirection: 'row',
+          justifyContent: 'space-evenly',
+          marginVertical: '4%',
+        }}>
+        <TouchableOpacity>
+          <Text
+            style={{
+              color: '#FFFFFF',
+              fontFamily: 'Outfit-Regular',
+              fontSize: 16,
+            }}>
+            Daily
+          </Text>
+        </TouchableOpacity>
+
+        <View>
+          <TouchableOpacity>
+            <Text
+              style={{
+                color: '#E56033',
+                fontFamily: 'Outfit-Regular',
+                fontSize: 16,
+              }}>
+              Week
+            </Text>
+            <View
+              style={{width: 41, height: '4%', backgroundColor: '#E56033'}}
+            />
+          </TouchableOpacity>
+        </View>
+        <TouchableOpacity>
+          <Text
+            style={{
+              color: '#FFFFFF',
+              fontFamily: 'Outfit-Regular',
+              fontSize: 16,
+            }}>
+            Month
+          </Text>
+        </TouchableOpacity>
+      </View>
+      <View
+        style={{
+          flexDirection: 'column',
+          alignItems: 'center',
+        }}>
+        {/*Week*/}
+        <View style={{marginBottom: '3%'}}>
+          <View
+            style={{
+              width: 270,
+              height: 40,
+              borderRadius: 10,
+              borderBottomWidth: 2,
+              borderBottomColor: '#393840',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              flexDirection: 'row',
+            }}>
+            <Text
+              style={{
+                color: '#CB8D78',
+                fontFamily: 'Outfit-Regular',
+                fontSize: 16,
+                marginLeft: '2%',
+              }}>
+              Week
+            </Text>
+            <Text
+              style={{
+                color: '#FFFFFF',
+                fontFamily: 'Outfit-Regular',
+                fontSize: 16,
+                marginRight: '2%',
+              }}>
+              17-23 April,2023
+            </Text>
+          </View>
+        </View>
+        {/*Total Sold*/}
+        <View style={{marginBottom: '3%'}}>
+          <View
+            style={{
+              width: 270,
+              height: 40,
+              borderRadius: 10,
+              borderBottomWidth: 2,
+              borderBottomColor: '#393840',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              flexDirection: 'row',
+            }}>
+            <Text
+              style={{
+                color: '#CB8D78',
+                fontFamily: 'Outfit-Regular',
+                fontSize: 16,
+                marginLeft: '2%',
+              }}>
+              Total Sold
+            </Text>
+            <Text
+              style={{
+                color: '#FFFFFF',
+                fontFamily: 'Outfit-Regular',
+                fontSize: 16,
+                marginRight: '2%',
+              }}>
+              Rs 20,000
+            </Text>
+          </View>
+        </View>
+        {/*Net Profit*/}
+        <View style={{marginBottom: '3%'}}>
+          <View
+            style={{
+              width: 270,
+              height: 40,
+              borderRadius: 10,
+              borderBottomWidth: 2,
+              borderBottomColor: '#393840',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              flexDirection: 'row',
+            }}>
+            <Text
+              style={{
+                color: '#CB8D78',
+                fontFamily: 'Outfit-Regular',
+                fontSize: 16,
+                marginLeft: '2%',
+              }}>
+              Net Profit
+            </Text>
+            <Text
+              style={{
+                color: '#FFFFFF',
+                fontFamily: 'Outfit-Regular',
+                fontSize: 16,
+                marginRight: '2%',
+              }}>
+              Rs 10,000
+            </Text>
+          </View>
+        </View>
+        {/*Compared To last week*/}
+        <View style={{marginBottom: '3%'}}>
+          <View
+            style={{
+              width: 270,
+              height: 40,
+              borderRadius: 10,
+              borderBottomWidth: 2,
+              borderBottomColor: '#393840',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              flexDirection: 'row',
+            }}>
+            <Text
+              style={{
+                color: '#CB8D78',
+                fontFamily: 'Outfit-Regular',
+                fontSize: 16,
+                marginLeft: '2%',
+              }}>
+              Compared to last week
+            </Text>
+            <Text
+              style={{
+                color: 'green',
+                fontFamily: 'Outfit-Regular',
+                fontSize: 16,
+                marginRight: '2%',
+              }}>
+              +2%
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  );
+};
+const BuyingRecordScreen = ({navigation}) => {
+  return (
+    <View style={styles.Background}>
+      <View style={{marginLeft: '5%', marginTop: '5%', flexDirection: 'row'}}>
+        <TouchableOpacity
+          onPress={() => navigation.dispatch(StackActions.pop(1))}>
+          <Ionicons name={'arrow-back-sharp'} size={25} color={'white'} />
+        </TouchableOpacity>
+        <Text
+          style={{
+            color: '#FFFFFF',
+            fontFamily: 'Outfit-SemiBold',
+            fontSize: 24,
+            marginLeft: '20.5%',
+            marginTop: '-1%',
+          }}>
+          Buying Records
+        </Text>
+      </View>
+      <View
+        style={{
+          alignItems: 'center',
+          flexDirection: 'row',
+          justifyContent: 'space-evenly',
+          marginVertical: '4%',
+        }}>
+        <TouchableOpacity>
+          <Text
+            style={{
+              color: '#FFFFFF',
+              fontFamily: 'Outfit-Regular',
+              fontSize: 16,
+            }}>
+            Daily
+          </Text>
+        </TouchableOpacity>
+
+        <View>
+          <TouchableOpacity>
+            <Text
+              style={{
+                color: '#E56033',
+                fontFamily: 'Outfit-Regular',
+                fontSize: 16,
+              }}>
+              Week
+            </Text>
+            <View
+              style={{width: 41, height: '4%', backgroundColor: '#E56033'}}
+            />
+          </TouchableOpacity>
+        </View>
+        <TouchableOpacity>
+          <Text
+            style={{
+              color: '#FFFFFF',
+              fontFamily: 'Outfit-Regular',
+              fontSize: 16,
+            }}>
+            Month
+          </Text>
+        </TouchableOpacity>
+      </View>
+      <View
+        style={{
+          flexDirection: 'column',
+          alignItems: 'center',
+        }}>
+        {/*Week*/}
+        <View style={{marginBottom: '3%'}}>
+          <View
+            style={{
+              width: 270,
+              height: 40,
+              borderRadius: 10,
+              borderBottomWidth: 2,
+              borderBottomColor: '#393840',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              flexDirection: 'row',
+            }}>
+            <Text
+              style={{
+                color: '#CB8D78',
+                fontFamily: 'Outfit-Regular',
+                fontSize: 16,
+                marginLeft: '2%',
+              }}>
+              Week
+            </Text>
+            <Text
+              style={{
+                color: '#FFFFFF',
+                fontFamily: 'Outfit-Regular',
+                fontSize: 16,
+                marginRight: '2%',
+              }}>
+              17-23 April,2023
+            </Text>
+          </View>
+        </View>
+        {/*Total Amount Spent*/}
+        <View style={{marginBottom: '3%'}}>
+          <View
+            style={{
+              width: 270,
+              height: 40,
+              borderRadius: 10,
+              borderBottomWidth: 2,
+              borderBottomColor: '#393840',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              flexDirection: 'row',
+            }}>
+            <Text
+              style={{
+                color: '#CB8D78',
+                fontFamily: 'Outfit-Regular',
+                fontSize: 16,
+                marginLeft: '2%',
+              }}>
+              Total Amount Spent
+            </Text>
+            <Text
+              style={{
+                color: '#FFFFFF',
+                fontFamily: 'Outfit-Regular',
+                fontSize: 16,
+                marginRight: '2%',
+              }}>
+              Rs 20,000
+            </Text>
+          </View>
+        </View>
+        {/*Budget*/}
+        <View style={{marginBottom: '3%'}}>
+          <View
+            style={{
+              width: 270,
+              height: 40,
+              borderRadius: 10,
+              borderBottomWidth: 2,
+              borderBottomColor: '#393840',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              flexDirection: 'row',
+            }}>
+            <Text
+              style={{
+                color: '#CB8D78',
+                fontFamily: 'Outfit-Regular',
+                fontSize: 16,
+                marginLeft: '2%',
+              }}>
+              Budget
+            </Text>
+            <Text
+              style={{
+                color: '#FFFFFF',
+                fontFamily: 'Outfit-Regular',
+                fontSize: 16,
+                marginRight: '2%',
+              }}>
+              Rs 18,000
+            </Text>
+          </View>
+        </View>
+        {/*Compared To last week*/}
+        <View style={{marginBottom: '3%'}}>
+          <View
+            style={{
+              width: 270,
+              height: 40,
+              borderRadius: 10,
+              borderBottomWidth: 2,
+              borderBottomColor: '#393840',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              flexDirection: 'row',
+            }}>
+            <Text
+              style={{
+                color: '#CB8D78',
+                fontFamily: 'Outfit-Regular',
+                fontSize: 16,
+                marginLeft: '2%',
+              }}>
+              Compared to last week
+            </Text>
+            <Text
+              style={{
+                color: 'red',
+                fontFamily: 'Outfit-Regular',
+                fontSize: 16,
+                marginRight: '2%',
+              }}>
+              +2%
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  );
+};
+const SettingScreen = ({navigation}) => {
+  return (
+    <View style={styles.Background}>
+      <View>
+        <Text
+          style={{
+            fontFamily: 'Outfit-Bold',
+            fontSize: 22,
+            color: '#ffffff',
+            margin: 15,
+            marginLeft: 42,
+            marginTop: 30,
+          }}>
+          Settings
+        </Text>
+      </View>
+      <TouchableOpacity>
+        <View style={{alignItems: 'center', marginBottom: 35}}>
+          <View style={{flexDirection: 'row', margin: 10}}>
+            <Image
+              source={require('./assets/images/S0mple.jpg')}
+              style={{
+                width: 54,
+                height: 54,
+                borderRadius: 54,
+              }}
+            />
+            <View style={{marginRight: 130, marginLeft: 15, marginTop: '2%'}}>
+              <Text
+                style={{
+                  fontFamily: 'Outfit-SemiBold',
+                  fontSize: 18,
+                  color: '#ffffff',
+                }}>
+                M.Chad
+              </Text>
+              <Text
+                style={{
+                  fontFamily: 'Outfit-Regular',
+                  fontSize: 13.5,
+                  color: 'grey',
+                  marginTop: '-3%',
+                }}>
+                Edit Personal details
+              </Text>
+            </View>
+            <Image
+              source={require('./assets/images/SmallArrowRight.png')}
+              style={{width: 10, height: 25, marginRight: 20, marginTop: '4%'}}
+            />
+          </View>
+        </View>
+      </TouchableOpacity>
+      <View style={{alignItems: 'center'}}>
+        <View
+          style={{
+            width: '80%',
+            height: 45,
+            padding: 10,
+          }}>
+          <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+            <Image
+              source={require('./assets/images/Moon.png')}
+              style={{width: 24, height: 24}}
+            />
+            <Text
+              style={{
+                color: '#ffffff',
+                fontSize: 16,
+                fontFamily: 'Outfit-Regular',
+                marginLeft: '-33%',
+              }}>
+              Dark Mode
+            </Text>
+            <Image
+              source={require('./assets/images/ToggleOnCircle.png')}
+              style={{width: 28, height: 24}}
+            />
+          </View>
+        </View>
+      </View>
+      <View style={{alignItems: 'center'}}>
+        <Text
+          style={{
+            fontFamily: 'Outfit-Regular',
+            fontSize: 18,
+            color: '#E56033',
+            marginRight: 260,
+          }}>
+          Profile
+        </Text>
+        <View
+          style={{
+            borderWidth: 2,
+            borderColor: '#65331c',
+            width: '80%',
+            height: 83,
+            borderRadius: 10,
+            margin: 10,
+            padding: 10,
+          }}>
+          <View style={{flexDirection: 'row'}}>
+            <Image
+              source={require('./assets/images/UserEdit.png')}
+              style={{width: 24, height: 24}}
+            />
+            <Text
+              style={{
+                color: '#ffffff',
+                fontSize: 15,
+                fontFamily: 'Outfit-Regular',
+                margin: 3,
+                marginLeft: 28,
+              }}>
+              Edit Profile
+            </Text>
+            <TouchableOpacity style={{marginLeft: '30%'}}>
+              <Image
+                source={require('./assets/images/SmallArrowRight.png')}
+                style={{width: 12, height: 22, marginLeft: '48%'}}
+              />
+            </TouchableOpacity>
+          </View>
+          <View style={{marginTop: 15, flexDirection: 'row'}}>
+            <Image
+              source={require('./assets/images/Key.png')}
+              style={{width: 24, height: 24}}
+            />
+            <Text
+              style={{
+                color: '#ffffff',
+                fontSize: 15,
+                fontFamily: 'Outfit-Regular',
+                margin: 3,
+                marginLeft: 28,
+              }}>
+              Change Password
+            </Text>
+
+            <TouchableOpacity style={{marginLeft: '23%'}}>
+              <Image
+                source={require('./assets/images/SmallArrowRight.png')}
+                style={{width: 12, height: 22, marginLeft: '32%'}}
+              />
+            </TouchableOpacity>
+          </View>
+        </View>
+      </View>
+      <View style={{alignItems: 'center'}}>
+        <Text
+          style={{
+            fontFamily: 'Outfit-Regular',
+            fontSize: 18,
+            color: '#E56033',
+            marginRight: 220,
+          }}>
+          Notifications
+        </Text>
+        <View
+          style={{
+            borderWidth: 2,
+            borderColor: '#65331c',
+            width: '80%',
+            height: 45,
+            borderRadius: 10,
+            margin: 10,
+            padding: 10,
+          }}>
+          <View style={{flexDirection: 'row'}}>
+            <Image
+              source={require('./assets/images/Notification.png')}
+              style={{width: 24, height: 24}}
+            />
+            <Text
+              style={{
+                color: '#ffffff',
+                fontSize: 15,
+                fontFamily: 'Outfit-Regular',
+                margin: 3,
+                marginLeft: 28,
+              }}>
+              Notifications
+            </Text>
+            <Image
+              source={require('./assets/images/ToggleOffCircle.png')}
+              style={{width: 29, height: 24, marginLeft: '42%'}}
+            />
+          </View>
+        </View>
+      </View>
+      <View style={{alignItems: 'center'}}>
+        <Text
+          style={{
+            fontFamily: 'Outfit-Regular',
+            fontSize: 18,
+            color: '#E56033',
+            marginRight: 250,
+          }}>
+          Regional
+        </Text>
+        <View
+          style={{
+            borderWidth: 2,
+            borderColor: '#65331c',
+            width: '80%',
+            height: 83,
+            borderRadius: 10,
+            margin: 10,
+            padding: 10,
+          }}>
+          <View style={{flexDirection: 'row'}}>
+            <Image
+              source={require('./assets/images/LanguageSquare.png')}
+              style={{width: 24, height: 24}}
+            />
+            <Text
+              style={{
+                color: '#ffffff',
+                fontSize: 15,
+                fontFamily: 'Outfit-Regular',
+                margin: 3,
+                marginLeft: 28,
+              }}>
+              Language
+            </Text>
+            <TouchableOpacity style={{marginLeft: '30%'}}>
+              <Image
+                source={require('./assets/images/SmallArrowRight.png')}
+                style={{width: 12, height: 22, marginLeft: '51%'}}
+              />
+            </TouchableOpacity>
+          </View>
+          <TouchableOpacity>
+            <View style={{marginTop: 15, flexDirection: 'row'}}>
+              <Image
+                source={require('./assets/images/LogoutCurve.png')}
+                style={{width: 24, height: 24}}
+              />
+              <Text
+                style={{
+                  color: '#ffffff',
+                  fontSize: 15,
+                  fontFamily: 'Outfit-Regular',
+                  margin: 3,
+                  marginLeft: 28,
+                }}>
+                Logout
+              </Text>
+            </View>
+          </TouchableOpacity>
+        </View>
+      </View>
+    </View>
+  );
+};
+const TabDrawer = () => {
+  return (
+    <Tab.Navigator
+      screenOptions={{
+        headerShown: false,
+        tabBarStyle: {
+          // borderTopLeftRadius: 21,
+          // borderTopRightRadius: 21,
+          borderRadius: 123,
+          backgroundColor: '#242222',
+          position: 'absolute',
+          bottom: 0,
+          padding: 10,
+          width: '100%',
+          height: 60,
+          zIndex: 8,
+        },
+      }}>
+      <Tab.Screen name="h" component={HomeScreen} />
+      <Tab.Screen name="Settings" component={SettingScreen} />
+    </Tab.Navigator>
+  );
+};
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator screenOptions={{headerShown: false}}>
+        {/*<Stack.Screen*/}
+        {/*  name="Tab Drawer"*/}
+        {/*  component={TabDrawer}*/}
+        {/*  options={{headerShown: false}}*/}
+        {/*/>*/}
         <Stack.Screen name="navigatorScreen" component={NavigatorScreen} />
         <Stack.Screen
           name="Welcome Screen"
@@ -2145,21 +3254,21 @@ const App = () => {
           component={CartScreen}
           options={{headerShown: false}}
         />
-        {/*<Stack.Screen*/}
-        {/*  name="OTP Screen"*/}
-        {/*  component={OTPScreen}*/}
-        {/*  options={{headerShown: false}}*/}
-        {/*/>*/}
-        {/*<Stack.Screen*/}
-        {/*  name="OTP Screen"*/}
-        {/*  component={OTPScreen}*/}
-        {/*  options={{headerShown: false}}*/}
-        {/*/>*/}
-        {/*<Stack.Screen*/}
-        {/*  name="OTP Screen"*/}
-        {/*  component={OTPScreen}*/}
-        {/*  options={{headerShown: false}}*/}
-        {/*/>*/}
+        <Stack.Screen
+          name="Home Screen"
+          component={HomeScreen}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Buying Records Screen"
+          component={BuyingRecordScreen}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Selling Records Screen"
+          component={SellingRecordScreen}
+          options={{headerShown: false}}
+        />
         <Stack.Screen
           name="Choose Payment Method Screen"
           component={ChoosePaymentScreen}
@@ -2170,11 +3279,11 @@ const App = () => {
           component={AddPaymentScreen}
           options={{headerShown: false}}
         />
-        {/*<Stack.Screen*/}
-        {/*  name="OTP Screen"*/}
-        {/*  component={OTPScreen}*/}
-        {/*  options={{headerShown: false}}*/}
-        {/*/>*/}
+        <Stack.Screen
+          name="Settings Screen"
+          component={SettingScreen}
+          options={{headerShown: false}}
+        />
         <Stack.Screen
           name="View Request Screen"
           component={ViewRequestScreen}
