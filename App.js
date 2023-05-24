@@ -1,4 +1,5 @@
 import 'react-native-gesture-handler';
+import NumericInput from 'react-native-numeric-input';
 import React, {useState, useEffect} from 'react';
 import {NavigationContainer, StackActions} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
