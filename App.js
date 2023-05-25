@@ -107,6 +107,11 @@ const NavigatorScreen = ({ navigation }) => {
           onPress={() => navigation.navigate('Add To History (Image)')}
         />
 
+        <Button
+          title={'Sell Products'}
+          onPress={() => navigation.navigate('Sell Products')}
+        />
+
       </ScrollView>
 
     </View>
@@ -2236,11 +2241,11 @@ const AddProductsBarcode = ({ navigation }) => {
         <Text style={{ fontFamily: 'Outfit-Bold', fontSize: 16, marginTop: 20 }}>Scan barcode to add a product</Text>
       </View>
 
-      <View style={{ height: 50, width: 50, marginTop: 20, backgroundColor: '#E56033', borderRadius: 50, marginLeft: 'auto', marginRight: 'auto', justifyContent: 'center', alignItems: 'center', alignContent: 'center' }}>
-        <Ionicons name={'camera-outline'} size={25} color={'black'} />
-
-      </View>
-
+      <TouchableOpacity>
+        <View style={{ height: 50, width: 50, marginTop: 20, backgroundColor: '#E56033', borderRadius: 50, marginLeft: 'auto', marginRight: 'auto', justifyContent: 'center', alignItems: 'center', alignContent: 'center' }}>
+          <Ionicons name={'camera-outline'} size={25} color={'black'} />
+        </View>
+      </TouchableOpacity>
 
     </View>
   );
@@ -2272,14 +2277,14 @@ const AddToHistoryImage = ({ navigation }) => {
       <View style={{ height: 490, width: 317, marginLeft: 'auto', marginRight: 'auto', justifyContent: 'center', alignItems: 'center', alignContent: 'center', backgroundColor: 'white', marginTop: 20, borderRadius: 18 }}>
 
 
-        <Text style={{ fontFamily: 'Outfit-Bold', fontSize: 16, marginTop: 330, maxWidth:250, textAlign:'center'}}>Take a picture of receipt to add to history or upload</Text>
+        <Text style={{ fontFamily: 'Outfit-Bold', fontSize: 16, marginTop: 330, maxWidth: 250, textAlign: 'center' }}>Take a picture of receipt to add to history or upload</Text>
       </View>
 
-      <View style={{ height: 50, width: 50, marginTop: 20, backgroundColor: '#E56033', borderRadius: 50, marginLeft: 'auto', marginRight: 'auto', justifyContent: 'center', alignItems: 'center', alignContent: 'center' }}>
-        <Ionicons name={'camera-outline'} size={25} color={'black'} />
-
-      </View>
-
+      <TouchableOpacity>
+        <View style={{ height: 50, width: 50, marginTop: 20, backgroundColor: '#E56033', borderRadius: 50, marginLeft: 'auto', marginRight: 'auto', justifyContent: 'center', alignItems: 'center', alignContent: 'center' }}>
+          <Ionicons name={'camera-outline'} size={25} color={'black'} />
+        </View>
+      </TouchableOpacity>
 
     </View>
   );
@@ -2590,7 +2595,7 @@ const SellingHistory = () => {
 
         <View >
           <Text style={{
-            fontFamily: 'outfit',
+            fontFamily: 'Outfit-Regular',
             textAlign: 'left',
             marginLeft: 56,
             fontSize: 23,
@@ -2601,22 +2606,22 @@ const SellingHistory = () => {
         </View>
 
         <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', marginTop: 45 }}>
-          <Text style={{ color: '#E56033', fontSize: 18, textDecorationLine: 'underline', fontWeight: '500', fontFamily: 'Helvetica' }}>
+          <Text style={{ color: '#E56033', fontSize: 18, textDecorationLine: 'underline', fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
             Week
           </Text>
-          <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Helvetica' }}>
+          <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
             Month
           </Text>
-          <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Helvetica' }}>
+          <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
             Year
           </Text>
         </View>
 
         <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', marginTop: 20 }}>
-          <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Helvetica' }}>
+          <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
             Date/Order ID
           </Text>
-          <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Helvetica' }}>
+          <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
             Amount
           </Text>
         </View>
@@ -2636,49 +2641,49 @@ const SellingHistory = () => {
         </View>
 
         <View style={{ flexDirection: 'row', justifyContent: 'space-evenly' }}>
-          <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Helvetica' }}>
+          <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
             9 Sept, 2022
           </Text>
-          <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Helvetica' }}>
+          <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
             Rs 2,000
           </Text>
         </View>
 
         <View style={{ marginLeft: 75 }}>
-          <Text style={{ color: 'white', fontSize: 13, fontWeight: '500', fontFamily: 'Helvetica' }}>
+          <Text style={{ color: 'white', fontSize: 13, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
             XFX1234
           </Text>
         </View>
 
 
         <View style={{ backgroundColor: '#242222', marginTop: 200, borderRadius: 40, width: 412, height: 250 }}>
-          <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Helvetica', marginTop: 30, marginLeft: 15 }}>
+          <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular', marginTop: 30, marginLeft: 15 }}>
             Latest Orders
           </Text>
 
           <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', marginTop: 13 }}>
-            <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Helvetica' }}>
+            <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
               09 september, 2022
             </Text>
-            <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Helvetica' }}>
+            <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
               Rs 2,000
             </Text>
           </View>
 
           <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', marginTop: 15 }}>
-            <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Helvetica' }}>
+            <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
               16 october, 2022
             </Text>
-            <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Helvetica' }}>
+            <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
               Rs 55,000
             </Text>
           </View>
 
           <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', marginTop: 15 }}>
-            <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Helvetica' }}>
+            <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
               01 August, 2022
             </Text>
-            <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Helvetica' }}>
+            <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
               Rs 10,000
             </Text>
           </View>
@@ -2703,7 +2708,7 @@ const ShoppingHistory = () => {
 
         <View >
           <Text style={{
-            fontFamily: 'outfit',
+            fontFamily: 'Outfit-Regular',
             textAlign: 'left',
             marginLeft: 56,
             fontSize: 23,
@@ -2714,22 +2719,22 @@ const ShoppingHistory = () => {
         </View>
 
         <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', marginTop: 45 }}>
-          <Text style={{ color: '#E56033', fontSize: 18, textDecorationLine: 'underline', fontWeight: '500', fontFamily: 'Helvetica' }}>
+          <Text style={{ color: '#E56033', fontSize: 18, textDecorationLine: 'underline', fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
             Week
           </Text>
-          <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Helvetica' }}>
+          <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
             Month
           </Text>
-          <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Helvetica' }}>
+          <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
             Year
           </Text>
         </View>
 
         <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', marginTop: 20 }}>
-          <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Helvetica' }}>
+          <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
             Date/Order ID
           </Text>
-          <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Helvetica' }}>
+          <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
             Amount
           </Text>
         </View>
@@ -2750,16 +2755,16 @@ const ShoppingHistory = () => {
         </View>
 
         <View style={{ flexDirection: 'row', justifyContent: 'space-evenly' }}>
-          <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Helvetica' }}>
+          <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
             9 Sept, 2022
           </Text>
-          <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Helvetica' }}>
+          <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
             Rs 2,000
           </Text>
         </View>
 
         <View style={{ marginLeft: 75 }}>
-          <Text style={{ color: 'white', fontSize: 13, fontWeight: '500', fontFamily: 'Helvetica' }}>
+          <Text style={{ color: 'white', fontSize: 13, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
             XFX1234
           </Text>
         </View>
@@ -2772,33 +2777,33 @@ const ShoppingHistory = () => {
 
 
         <View style={{ backgroundColor: '#242222', marginTop: 200, borderRadius: 40, width: 412, height: 250 }}>
-          <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Helvetica', marginTop: 30, marginLeft: 15 }}>
+          <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular', marginTop: 30, marginLeft: 15 }}>
             Latest Orders
           </Text>
 
           <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', marginTop: 13 }}>
-            <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Helvetica' }}>
+            <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
               09 september, 2022
             </Text>
-            <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Helvetica' }}>
+            <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
               Rs 2,000
             </Text>
           </View>
 
           <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', marginTop: 15 }}>
-            <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Helvetica' }}>
+            <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
               16 october, 2022
             </Text>
-            <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Helvetica' }}>
+            <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
               Rs 55,000
             </Text>
           </View>
 
           <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', marginTop: 15 }}>
-            <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Helvetica' }}>
+            <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
               01 August, 2022
             </Text>
-            <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Helvetica' }}>
+            <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
               Rs 10,000
             </Text>
           </View>
@@ -2813,6 +2818,213 @@ const ShoppingHistory = () => {
 
       </ScrollView>
     </View>
+  );
+};
+
+const SellProducts = () => {
+  return (
+    <View style={styles.Background}>
+      <ScrollView>
+
+        <View style={{ flexDirection: 'row', justifyContent: 'space-evenly' }} >
+          <Text style={{
+            fontFamily: 'outfit',
+            textAlign: 'left',
+            fontSize: 23,
+            marginTop: 20,
+            fontWeight: 'bold',
+            color: 'white',
+          }}>Comercio
+          </Text>
+          <TouchableOpacity style={{ height: 25, width: 25, marginLeft: '50%', marginTop: 20 }}>
+            <Image
+              source={require('./assets/images/ShoppingCart.png')}
+              style={{ height: 25, width: 25 }}
+            />
+          </TouchableOpacity>
+        </View>
+
+        <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', marginTop: 45 }}>
+          <Text style={{ color: '#E56033', fontSize: 18, textDecorationLine: 'underline', fontFamily: 'Outfit-Regular' }}>
+            Products
+          </Text>
+          <Text style={{ color: 'white', fontSize: 18, fontFamily: 'Outfit-Regular', marginLeft: 40 }}>
+            Retailers
+          </Text>
+
+        </View>
+
+        <View style={{
+          backgroundColor: '#242222', marginTop: 10, borderRadius: 40, width: 356, height: 50, justifyContent: 'center', alignItems: 'center', alignContent: 'center', marginLeft: 'auto', marginRight: 'auto', flexDirection: 'row',
+        }}>
+
+          <Text style={{ color: 'white', fontSize: 18, fontFamily: 'Outfit-Regular', }}>
+            Search
+          </Text>
+          <TouchableOpacity style={{ height: 24, width: 24, marginLeft: '60%' }}>
+            <Image
+              source={require('./assets/images/barcode1.png')}
+              style={{ height: 24, width: 24 }}
+            />
+          </TouchableOpacity>
+
+          <TouchableOpacity style={{ height: 24, width: 24, marginLeft: 10 }}>
+            <Image
+              source={require('./assets/images/search.png')}
+              style={{ height: 24, width: 24 }}
+            />
+          </TouchableOpacity>
+
+        </View>
+
+        <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', marginTop: 20 }}>
+
+          <Text style={{ color: 'white', fontSize: 18, fontFamily: 'Outfit-Regular' }}>
+            Your Products
+          </Text>
+
+          <TouchableOpacity>
+            <View style={{ backgroundColor: '#E56033', height: 31, width: 131, borderRadius: 9, marginLeft: 60 }}>
+              <Text style={{ color: 'white', fontSize: 18, fontFamily: 'Outfit-Regular', padding: 3 }}>
+                + Add Products
+              </Text>
+
+            </View>
+          </TouchableOpacity>
+
+        </View>
+
+        <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', marginTop: 20 }}>
+
+          <TouchableOpacity style={{ width: 97, height: 49, }}>
+            <View style={{ width: 97, height: 49, borderRadius: 7, backgroundColor: '#E56033', flexDirection: 'row' }}>
+              <Text style={{ color: 'white', fontSize: 13, fontFamily: 'Outfit-Regular', maxWidth: 65, textAlign: 'left', marginTop: 8, marginLeft: 2 }}>
+                All Categories
+              </Text>
+              <Image
+                source={require('./assets/images/category.png')}
+                style={{ height: 24, width: 24, marginLeft: 5, marginTop: 14 }}
+              />
+            </View>
+          </TouchableOpacity>
+
+
+          <TouchableOpacity style={{ width: 97, height: 49, }}>
+            <View style={{ width: 97, height: 49, borderRadius: 7, backgroundColor: '#242222', flexDirection: 'row' }}>
+              <Text style={{ color: 'white', fontSize: 13, fontFamily: 'Outfit-Regular', maxWidth: 40, textAlign: 'left', marginTop: 8, marginLeft: 12 }}>
+                On Sale
+              </Text>
+              <Image
+                source={require('./assets/images/radar-2.png')}
+                style={{ height: 24, width: 24, marginLeft: 25, marginTop: 14 }}
+              />
+            </View>
+          </TouchableOpacity>
+
+
+          <TouchableOpacity style={{ width: 97, height: 49, }}>
+            <View style={{ width: 97, height: 49, borderRadius: 7, backgroundColor: '#242222', flexDirection: 'row' }}>
+              <Text style={{ color: 'white', fontSize: 13, fontFamily: 'Outfit-Regular', maxWidth: 40, textAlign: 'left', marginTop: 8, marginLeft: 12 }}>
+                Out of Stock
+              </Text>
+              <Image
+                source={require('./assets/images/shopping-bag.png')}
+                style={{ height: 24, width: 24, marginLeft: 12, marginTop: 14 }}
+              />
+            </View>
+          </TouchableOpacity>
+        </View>
+
+
+
+        <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', alignItems: 'center', marginTop: 40 }}>
+
+          <TouchableOpacity>
+            <View style={{ height: 104, width: 100, backgroundColor: '#3F3F3F', borderRadius: 7, justifyContent: 'center' }}>
+              <Image
+                source={require('./assets/images/gpu.png')}
+                style={{ height: 39, width: 81, justifyContent: 'center', marginLeft: 8 }}
+              />
+              <Text style={{ color: 'white', fontSize: 16, fontFamily: 'Outfit-Regular', textAlign: 'center', marginTop: 8 }}>
+                Rtx 3090
+              </Text>
+            </View>
+          </TouchableOpacity>
+
+          <TouchableOpacity>
+            <View style={{ height: 104, width: 100, backgroundColor: '#000000', borderRadius: 7, justifyContent: 'center', alignItems: 'center' }}>
+              <Image
+                source={require('./assets/images/pc.png')}
+                style={{ height: 60, width: 54, justifyContent: 'center', marginLeft: 8 }}
+              />
+              <Text style={{ color: 'white', fontSize: 16, fontFamily: 'Outfit-Regular', textAlign: 'center', marginTop: 8 }}>
+                PC
+              </Text>
+            </View>
+          </TouchableOpacity>
+
+        </View>
+
+        <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', alignItems: 'center', marginTop: 40 }}>
+
+          <TouchableOpacity>
+            <View style={{ height: 104, width: 100, backgroundColor: '#3F3F3F', borderRadius: 7, justifyContent: 'center' }}>
+              <Image
+                source={require('./assets/images/gpu.png')}
+                style={{ height: 39, width: 81, justifyContent: 'center', marginLeft: 8 }}
+              />
+              <Text style={{ color: 'white', fontSize: 16, fontFamily: 'Outfit-Regular', textAlign: 'center', marginTop: 8 }}>
+                Rtx 3090
+              </Text>
+            </View>
+          </TouchableOpacity>
+
+          <TouchableOpacity>
+            <View style={{ height: 104, width: 100, backgroundColor: '#000000', borderRadius: 7, justifyContent: 'center', alignItems: 'center' }}>
+              <Image
+                source={require('./assets/images/pc.png')}
+                style={{ height: 60, width: 54, justifyContent: 'center', marginLeft: 8 }}
+              />
+              <Text style={{ color: 'white', fontSize: 16, fontFamily: 'Outfit-Regular', textAlign: 'center', marginTop: 8 }}>
+                PC
+              </Text>
+            </View>
+          </TouchableOpacity>
+
+        </View>
+
+        <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', alignItems: 'center', marginTop: 40 }}>
+
+          <TouchableOpacity>
+            <View style={{ height: 104, width: 100, backgroundColor: '#3F3F3F', borderRadius: 7, justifyContent: 'center' }}>
+              <Image
+                source={require('./assets/images/gpu.png')}
+                style={{ height: 39, width: 81, justifyContent: 'center', marginLeft: 8 }}
+              />
+              <Text style={{ color: 'white', fontSize: 16, fontFamily: 'Outfit-Regular', textAlign: 'center', marginTop: 8 }}>
+                Rtx 3090
+              </Text>
+            </View>
+          </TouchableOpacity>
+
+          <TouchableOpacity>
+            <View style={{ height: 104, width: 100, backgroundColor: '#000000', borderRadius: 7, justifyContent: 'center', alignItems: 'center' }}>
+              <Image
+                source={require('./assets/images/pc.png')}
+                style={{ height: 60, width: 54, justifyContent: 'center', marginLeft: 8 }}
+              />
+              <Text style={{ color: 'white', fontSize: 16, fontFamily: 'Outfit-Regular', textAlign: 'center', marginTop: 8 }}>
+                PC
+              </Text>
+            </View>
+          </TouchableOpacity>
+
+        </View>
+
+
+
+      </ScrollView >
+    </View >
   );
 };
 
@@ -2889,7 +3101,7 @@ const App = () => {
         <Stack.Screen name="Selling History" component={SellingHistory} options={{ headerShown: false }} />
         <Stack.Screen name="Shopping History" component={ShoppingHistory} options={{ headerShown: false }} />
         <Stack.Screen name="Add Products (Barcode)" component={AddProductsBarcode} options={{ headerShown: false }} />
-
+        <Stack.Screen name="Sell Products" component={SellProducts} options={{ headerShown: false }} />
 
 
       </Stack.Navigator>
