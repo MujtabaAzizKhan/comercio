@@ -1,9 +1,9 @@
 import 'react-native-gesture-handler';
 import NumericInput from 'react-native-numeric-input';
 import DropDownPicker from 'react-native-dropdown-picker';
-import React, { useState, useEffect } from 'react';
-import { NavigationContainer, StackActions } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import React, {useState, useEffect} from 'react';
+import {NavigationContainer, StackActions} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Octicons from 'react-native-vector-icons/Octicons';
 import antDesign from 'react-native-vector-icons/AntDesign';
 import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
@@ -28,7 +28,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 
 const Stack = createNativeStackNavigator();
 
-const NavigatorScreen = ({ navigation }) => {
+const NavigatorScreen = ({navigation}) => {
   return (
     <View>
       <ScrollView>
@@ -45,7 +45,10 @@ const NavigatorScreen = ({ navigation }) => {
           onPress={() => navigation.navigate('Sign up Screen')}
         />
         <Button title="OTP" onPress={() => navigation.navigate('OTP Screen')} />
-        <Button title="Cart" onPress={() => navigation.navigate('Cart Screen')} />
+        <Button
+          title="Cart"
+          onPress={() => navigation.navigate('Cart Screen')}
+        />
         <Button title="Home" onPress={() => navigation.navigate('hello')} />
         <Button
           title="Buying Records"
@@ -111,13 +114,11 @@ const NavigatorScreen = ({ navigation }) => {
           title={'Sell Products'}
           onPress={() => navigation.navigate('Sell Products')}
         />
-
       </ScrollView>
-
     </View>
   );
 };
-const WelcomeScreen = ({ navigation }) => {
+const WelcomeScreen = ({navigation}) => {
   return (
     <View style={styles.Background}>
       <View style={styles.WelcomeContainer}>
@@ -187,12 +188,12 @@ const WelcomeScreen = ({ navigation }) => {
     </View>
   );
 };
-const SignInScreen = ({ navigation }) => {
+const SignInScreen = ({navigation}) => {
   return (
     <View style={styles.Background}>
       <TouchableOpacity
         onPress={() => navigation.dispatch(StackActions.pop(1))}>
-        <View style={{ marginLeft: '5%', marginTop: '5%' }}>
+        <View style={{marginLeft: '5%', marginTop: '5%'}}>
           <Ionicons name={'arrow-back-sharp'} size={25} color={'white'} />
         </View>
       </TouchableOpacity>
@@ -202,11 +203,11 @@ const SignInScreen = ({ navigation }) => {
           marginLeft: '10%',
         }}>
         <Text
-          style={{ color: '#FFFFFF', fontFamily: 'Outfit-Bold', fontSize: 37 }}>
+          style={{color: '#FFFFFF', fontFamily: 'Outfit-Bold', fontSize: 37}}>
           Let's sign you in.
         </Text>
         <Text
-          style={{ color: '#FFFFFF', fontFamily: 'Outfit-Light', fontSize: 37 }}>
+          style={{color: '#FFFFFF', fontFamily: 'Outfit-Light', fontSize: 37}}>
           Welcome back. You've been missed!
         </Text>
       </View>
@@ -217,7 +218,7 @@ const SignInScreen = ({ navigation }) => {
           alignItems: 'center',
           marginTop: '12%',
         }}>
-        <View style={{ marginBottom: '10%' }}>
+        <View style={{marginBottom: '10%'}}>
           <TextInput
             style={{
               width: 313,
@@ -319,12 +320,12 @@ const SignInScreen = ({ navigation }) => {
     </View>
   );
 };
-const SignUpScreen = ({ navigation }) => {
+const SignUpScreen = ({navigation}) => {
   return (
     <View style={styles.Background}>
       <TouchableOpacity
         onPress={() => navigation.dispatch(StackActions.pop(1))}>
-        <View style={{ marginLeft: '5%', marginTop: '5%' }}>
+        <View style={{marginLeft: '5%', marginTop: '5%'}}>
           <Ionicons name={'arrow-back-sharp'} size={25} color={'white'} />
         </View>
       </TouchableOpacity>
@@ -334,15 +335,15 @@ const SignUpScreen = ({ navigation }) => {
           marginLeft: '10%',
         }}>
         <Text
-          style={{ color: '#FFFFFF', fontFamily: 'Outfit-Bold', fontSize: 37 }}>
+          style={{color: '#FFFFFF', fontFamily: 'Outfit-Bold', fontSize: 37}}>
           Let's sign you up.
         </Text>
         <Text
-          style={{ color: '#FFFFFF', fontFamily: 'Outfit-Light', fontSize: 37 }}>
+          style={{color: '#FFFFFF', fontFamily: 'Outfit-Light', fontSize: 37}}>
           Welcome.
         </Text>
         <Text
-          style={{ color: '#FFFFFF', fontFamily: 'Outfit-Light', fontSize: 34 }}>
+          style={{color: '#FFFFFF', fontFamily: 'Outfit-Light', fontSize: 34}}>
           A new journey starts!
         </Text>
       </View>
@@ -353,7 +354,7 @@ const SignUpScreen = ({ navigation }) => {
           alignItems: 'center',
           marginTop: '8%',
         }}>
-        <View style={{ marginBottom: '7%' }}>
+        <View style={{marginBottom: '7%'}}>
           <TextInput
             style={{
               width: 313,
@@ -373,7 +374,7 @@ const SignUpScreen = ({ navigation }) => {
             placeholderTextColor={'#CB8D78'}
           />
         </View>
-        <View style={{ marginBottom: '7%' }}>
+        <View style={{marginBottom: '7%'}}>
           <TextInput
             style={{
               width: 313,
@@ -475,12 +476,12 @@ const SignUpScreen = ({ navigation }) => {
     </View>
   );
 };
-const OTPScreen = ({ navigation }) => {
+const OTPScreen = ({navigation}) => {
   return (
     <View style={styles.Background}>
       <TouchableOpacity
         onPress={() => navigation.dispatch(StackActions.pop(1))}>
-        <View style={{ marginLeft: '5%', marginTop: '5%' }}>
+        <View style={{marginLeft: '5%', marginTop: '5%'}}>
           <Ionicons name={'arrow-back-sharp'} size={25} color={'white'} />
         </View>
       </TouchableOpacity>
@@ -490,15 +491,15 @@ const OTPScreen = ({ navigation }) => {
           marginLeft: '13%',
         }}>
         <Text
-          style={{ color: '#FFFFFF', fontFamily: 'Outfit-Bold', fontSize: 37 }}>
+          style={{color: '#FFFFFF', fontFamily: 'Outfit-Bold', fontSize: 37}}>
           Enter OTP
         </Text>
         <Text
-          style={{ color: '#FFFFFF', fontFamily: 'Outfit-Light', fontSize: 20 }}>
+          style={{color: '#FFFFFF', fontFamily: 'Outfit-Light', fontSize: 20}}>
           A 4-digit code has been sent to
         </Text>
         <Text
-          style={{ color: '#FFFFFF', fontFamily: 'Outfit-Light', fontSize: 20 }}>
+          style={{color: '#FFFFFF', fontFamily: 'Outfit-Light', fontSize: 20}}>
           +92-33069420137
         </Text>
       </View>
@@ -509,7 +510,7 @@ const OTPScreen = ({ navigation }) => {
           alignItems: 'center',
           justifyContent: 'center',
         }}>
-        <View style={{ margin: '2%' }}>
+        <View style={{margin: '2%'}}>
           <TextInput
             style={{
               width: 54,
@@ -529,7 +530,7 @@ const OTPScreen = ({ navigation }) => {
             placeholderTextColor={'#CB8D78'}
           />
         </View>
-        <View style={{ margin: '2%' }}>
+        <View style={{margin: '2%'}}>
           <TextInput
             style={{
               width: 54,
@@ -549,7 +550,7 @@ const OTPScreen = ({ navigation }) => {
             placeholderTextColor={'#CB8D78'}
           />
         </View>
-        <View style={{ margin: '2%' }}>
+        <View style={{margin: '2%'}}>
           <TextInput
             style={{
               width: 54,
@@ -569,7 +570,7 @@ const OTPScreen = ({ navigation }) => {
             placeholderTextColor={'#CB8D78'}
           />
         </View>
-        <View style={{ margin: '2%' }}>
+        <View style={{margin: '2%'}}>
           <TextInput
             style={{
               width: 54,
@@ -642,14 +643,14 @@ const OTPScreen = ({ navigation }) => {
     </View>
   );
 };
-const ViewRequestScreen = ({ navigation }) => {
+const ViewRequestScreen = ({navigation}) => {
   return (
     <ScrollView style={styles.Background}>
       <View>
         <TouchableOpacity
           onPress={() => navigation.dispatch(StackActions.pop(1))}>
           <View
-            style={{ marginLeft: '5%', marginTop: '5%', flexDirection: 'row' }}>
+            style={{marginLeft: '5%', marginTop: '5%', flexDirection: 'row'}}>
             <Ionicons name={'arrow-back-sharp'} size={25} color={'white'} />
             <Text
               style={{
@@ -696,7 +697,7 @@ const ViewRequestScreen = ({ navigation }) => {
               alignItems: 'center',
               borderRadius: 10,
             }}>
-            <View style={{ flexDirection: 'row', marginLeft: '-42%' }}>
+            <View style={{flexDirection: 'row', marginLeft: '-42%'}}>
               <View
                 style={{
                   backgroundColor: '#E56033',
@@ -707,11 +708,11 @@ const ViewRequestScreen = ({ navigation }) => {
                   justifyContent: 'center',
                 }}>
                 <Image
-                  style={{ height: 34, width: 34, borderRadius: 34 }}
+                  style={{height: 34, width: 34, borderRadius: 34}}
                   source={require('./assets/images/S0mple.jpg')}
                 />
               </View>
-              <View style={{ marginLeft: '5%' }}>
+              <View style={{marginLeft: '5%'}}>
                 <Text
                   style={{
                     color: '#FFFFFF',
@@ -720,37 +721,37 @@ const ViewRequestScreen = ({ navigation }) => {
                   }}>
                   The King
                 </Text>
-                <View style={{ flexDirection: 'row' }}>
+                <View style={{flexDirection: 'row'}}>
                   <AntDesign name={'staro'} size={12} color={'gold'} />
                   <AntDesign
                     name={'staro'}
                     size={12}
-                    style={{ marginLeft: '1%' }}
+                    style={{marginLeft: '1%'}}
                     color={'gold'}
                   />
                   <AntDesign
                     name={'staro'}
                     size={12}
-                    style={{ marginLeft: '1%' }}
+                    style={{marginLeft: '1%'}}
                     color={'gold'}
                   />
                   <AntDesign
                     name={'staro'}
                     size={12}
-                    style={{ marginLeft: '1%' }}
+                    style={{marginLeft: '1%'}}
                     color={'gold'}
                   />
                   <AntDesign
                     name={'staro'}
                     size={12}
-                    style={{ marginLeft: '1%' }}
+                    style={{marginLeft: '1%'}}
                     color={'gold'}
                   />
                 </View>
               </View>
             </View>
-            <View style={{ flexDirection: 'row' }}>
-              <View style={{ margin: '3.5%', marginLeft: '-20%' }}>
+            <View style={{flexDirection: 'row'}}>
+              <View style={{margin: '3.5%', marginLeft: '-20%'}}>
                 <Text
                   style={{
                     color: '#FFFFFF',
@@ -768,7 +769,7 @@ const ViewRequestScreen = ({ navigation }) => {
                   Sheesh Shop
                 </Text>
               </View>
-              <View style={{ margin: '3.5%', marginLeft: '15%' }}>
+              <View style={{margin: '3.5%', marginLeft: '15%'}}>
                 <Text
                   style={{
                     color: '#FFFFFF',
@@ -788,10 +789,10 @@ const ViewRequestScreen = ({ navigation }) => {
               </View>
             </View>
             <View
-              style={{ flexDirection: 'row', margin: '5%', marginLeft: '-26%' }}>
+              style={{flexDirection: 'row', margin: '5%', marginLeft: '-26%'}}>
               <Octicons name={'location'} size={20} color={'#FFFFFF'} />
 
-              <View style={{ marginLeft: '3.5%' }}>
+              <View style={{marginLeft: '3.5%'}}>
                 <Text
                   style={{
                     color: '#FFFFFF',
@@ -810,7 +811,7 @@ const ViewRequestScreen = ({ navigation }) => {
                 </Text>
               </View>
             </View>
-            <View style={{ flexDirection: 'row' }}>
+            <View style={{flexDirection: 'row'}}>
               <TouchableOpacity>
                 <View
                   style={{
@@ -874,7 +875,7 @@ const ViewRequestScreen = ({ navigation }) => {
               borderRadius: 10,
               marginTop: '4%',
             }}>
-            <View style={{ flexDirection: 'row', marginLeft: '-42%' }}>
+            <View style={{flexDirection: 'row', marginLeft: '-42%'}}>
               <View
                 style={{
                   backgroundColor: '#E56033',
@@ -885,11 +886,11 @@ const ViewRequestScreen = ({ navigation }) => {
                   justifyContent: 'center',
                 }}>
                 <Image
-                  style={{ height: 34, width: 34, borderRadius: 34 }}
+                  style={{height: 34, width: 34, borderRadius: 34}}
                   source={require('./assets/images/S0mple.jpg')}
                 />
               </View>
-              <View style={{ marginLeft: '5%' }}>
+              <View style={{marginLeft: '5%'}}>
                 <Text
                   style={{
                     color: '#FFFFFF',
@@ -898,37 +899,37 @@ const ViewRequestScreen = ({ navigation }) => {
                   }}>
                   The King
                 </Text>
-                <View style={{ flexDirection: 'row' }}>
+                <View style={{flexDirection: 'row'}}>
                   <AntDesign name={'staro'} size={12} color={'gold'} />
                   <AntDesign
                     name={'staro'}
                     size={12}
-                    style={{ marginLeft: '1%' }}
+                    style={{marginLeft: '1%'}}
                     color={'gold'}
                   />
                   <AntDesign
                     name={'staro'}
                     size={12}
-                    style={{ marginLeft: '1%' }}
+                    style={{marginLeft: '1%'}}
                     color={'gold'}
                   />
                   <AntDesign
                     name={'staro'}
                     size={12}
-                    style={{ marginLeft: '1%' }}
+                    style={{marginLeft: '1%'}}
                     color={'gold'}
                   />
                   <AntDesign
                     name={'staro'}
                     size={12}
-                    style={{ marginLeft: '1%' }}
+                    style={{marginLeft: '1%'}}
                     color={'gold'}
                   />
                 </View>
               </View>
             </View>
-            <View style={{ flexDirection: 'row' }}>
-              <View style={{ margin: '3.5%', marginLeft: '-20%' }}>
+            <View style={{flexDirection: 'row'}}>
+              <View style={{margin: '3.5%', marginLeft: '-20%'}}>
                 <Text
                   style={{
                     color: '#FFFFFF',
@@ -946,7 +947,7 @@ const ViewRequestScreen = ({ navigation }) => {
                   Sheesh Shop
                 </Text>
               </View>
-              <View style={{ margin: '3.5%', marginLeft: '15%' }}>
+              <View style={{margin: '3.5%', marginLeft: '15%'}}>
                 <Text
                   style={{
                     color: '#FFFFFF',
@@ -966,10 +967,10 @@ const ViewRequestScreen = ({ navigation }) => {
               </View>
             </View>
             <View
-              style={{ flexDirection: 'row', margin: '5%', marginLeft: '-26%' }}>
+              style={{flexDirection: 'row', margin: '5%', marginLeft: '-26%'}}>
               <Octicons name={'location'} size={20} color={'#FFFFFF'} />
 
-              <View style={{ marginLeft: '3.5%' }}>
+              <View style={{marginLeft: '3.5%'}}>
                 <Text
                   style={{
                     color: '#FFFFFF',
@@ -988,7 +989,7 @@ const ViewRequestScreen = ({ navigation }) => {
                 </Text>
               </View>
             </View>
-            <View style={{ flexDirection: 'row' }}>
+            <View style={{flexDirection: 'row'}}>
               <TouchableOpacity>
                 <View
                   style={{
@@ -1052,7 +1053,7 @@ const ViewRequestScreen = ({ navigation }) => {
               borderRadius: 10,
               marginTop: '4%',
             }}>
-            <View style={{ flexDirection: 'row', marginLeft: '-42%' }}>
+            <View style={{flexDirection: 'row', marginLeft: '-42%'}}>
               <View
                 style={{
                   backgroundColor: '#E56033',
@@ -1063,11 +1064,11 @@ const ViewRequestScreen = ({ navigation }) => {
                   justifyContent: 'center',
                 }}>
                 <Image
-                  style={{ height: 34, width: 34, borderRadius: 34 }}
+                  style={{height: 34, width: 34, borderRadius: 34}}
                   source={require('./assets/images/S0mple.jpg')}
                 />
               </View>
-              <View style={{ marginLeft: '5%' }}>
+              <View style={{marginLeft: '5%'}}>
                 <Text
                   style={{
                     color: '#FFFFFF',
@@ -1076,37 +1077,37 @@ const ViewRequestScreen = ({ navigation }) => {
                   }}>
                   The King
                 </Text>
-                <View style={{ flexDirection: 'row' }}>
+                <View style={{flexDirection: 'row'}}>
                   <AntDesign name={'staro'} size={12} color={'gold'} />
                   <AntDesign
                     name={'staro'}
                     size={12}
-                    style={{ marginLeft: '1%' }}
+                    style={{marginLeft: '1%'}}
                     color={'gold'}
                   />
                   <AntDesign
                     name={'staro'}
                     size={12}
-                    style={{ marginLeft: '1%' }}
+                    style={{marginLeft: '1%'}}
                     color={'gold'}
                   />
                   <AntDesign
                     name={'staro'}
                     size={12}
-                    style={{ marginLeft: '1%' }}
+                    style={{marginLeft: '1%'}}
                     color={'gold'}
                   />
                   <AntDesign
                     name={'staro'}
                     size={12}
-                    style={{ marginLeft: '1%' }}
+                    style={{marginLeft: '1%'}}
                     color={'gold'}
                   />
                 </View>
               </View>
             </View>
-            <View style={{ flexDirection: 'row' }}>
-              <View style={{ margin: '3.5%', marginLeft: '-20%' }}>
+            <View style={{flexDirection: 'row'}}>
+              <View style={{margin: '3.5%', marginLeft: '-20%'}}>
                 <Text
                   style={{
                     color: '#FFFFFF',
@@ -1124,7 +1125,7 @@ const ViewRequestScreen = ({ navigation }) => {
                   Sheesh Shop
                 </Text>
               </View>
-              <View style={{ margin: '3.5%', marginLeft: '15%' }}>
+              <View style={{margin: '3.5%', marginLeft: '15%'}}>
                 <Text
                   style={{
                     color: '#FFFFFF',
@@ -1144,10 +1145,10 @@ const ViewRequestScreen = ({ navigation }) => {
               </View>
             </View>
             <View
-              style={{ flexDirection: 'row', margin: '5%', marginLeft: '-26%' }}>
+              style={{flexDirection: 'row', margin: '5%', marginLeft: '-26%'}}>
               <Octicons name={'location'} size={20} color={'#FFFFFF'} />
 
-              <View style={{ marginLeft: '3.5%' }}>
+              <View style={{marginLeft: '3.5%'}}>
                 <Text
                   style={{
                     color: '#FFFFFF',
@@ -1166,7 +1167,7 @@ const ViewRequestScreen = ({ navigation }) => {
                 </Text>
               </View>
             </View>
-            <View style={{ flexDirection: 'row' }}>
+            <View style={{flexDirection: 'row'}}>
               <TouchableOpacity>
                 <View
                   style={{
@@ -1230,7 +1231,7 @@ const ViewRequestScreen = ({ navigation }) => {
               borderRadius: 10,
               marginTop: '4%',
             }}>
-            <View style={{ flexDirection: 'row', marginLeft: '-42%' }}>
+            <View style={{flexDirection: 'row', marginLeft: '-42%'}}>
               <View
                 style={{
                   backgroundColor: '#E56033',
@@ -1241,11 +1242,11 @@ const ViewRequestScreen = ({ navigation }) => {
                   justifyContent: 'center',
                 }}>
                 <Image
-                  style={{ height: 34, width: 34, borderRadius: 34 }}
+                  style={{height: 34, width: 34, borderRadius: 34}}
                   source={require('./assets/images/S0mple.jpg')}
                 />
               </View>
-              <View style={{ marginLeft: '5%' }}>
+              <View style={{marginLeft: '5%'}}>
                 <Text
                   style={{
                     color: '#FFFFFF',
@@ -1254,37 +1255,37 @@ const ViewRequestScreen = ({ navigation }) => {
                   }}>
                   The King
                 </Text>
-                <View style={{ flexDirection: 'row' }}>
+                <View style={{flexDirection: 'row'}}>
                   <AntDesign name={'staro'} size={12} color={'gold'} />
                   <AntDesign
                     name={'staro'}
                     size={12}
-                    style={{ marginLeft: '1%' }}
+                    style={{marginLeft: '1%'}}
                     color={'gold'}
                   />
                   <AntDesign
                     name={'staro'}
                     size={12}
-                    style={{ marginLeft: '1%' }}
+                    style={{marginLeft: '1%'}}
                     color={'gold'}
                   />
                   <AntDesign
                     name={'staro'}
                     size={12}
-                    style={{ marginLeft: '1%' }}
+                    style={{marginLeft: '1%'}}
                     color={'gold'}
                   />
                   <AntDesign
                     name={'staro'}
                     size={12}
-                    style={{ marginLeft: '1%' }}
+                    style={{marginLeft: '1%'}}
                     color={'gold'}
                   />
                 </View>
               </View>
             </View>
-            <View style={{ flexDirection: 'row' }}>
-              <View style={{ margin: '3.5%', marginLeft: '-20%' }}>
+            <View style={{flexDirection: 'row'}}>
+              <View style={{margin: '3.5%', marginLeft: '-20%'}}>
                 <Text
                   style={{
                     color: '#FFFFFF',
@@ -1302,7 +1303,7 @@ const ViewRequestScreen = ({ navigation }) => {
                   Sheesh Shop
                 </Text>
               </View>
-              <View style={{ margin: '3.5%', marginLeft: '15%' }}>
+              <View style={{margin: '3.5%', marginLeft: '15%'}}>
                 <Text
                   style={{
                     color: '#FFFFFF',
@@ -1322,10 +1323,10 @@ const ViewRequestScreen = ({ navigation }) => {
               </View>
             </View>
             <View
-              style={{ flexDirection: 'row', margin: '5%', marginLeft: '-26%' }}>
+              style={{flexDirection: 'row', margin: '5%', marginLeft: '-26%'}}>
               <Octicons name={'location'} size={20} color={'#FFFFFF'} />
 
-              <View style={{ marginLeft: '3.5%' }}>
+              <View style={{marginLeft: '3.5%'}}>
                 <Text
                   style={{
                     color: '#FFFFFF',
@@ -1344,7 +1345,7 @@ const ViewRequestScreen = ({ navigation }) => {
                 </Text>
               </View>
             </View>
-            <View style={{ flexDirection: 'row' }}>
+            <View style={{flexDirection: 'row'}}>
               <TouchableOpacity>
                 <View
                   style={{
@@ -1401,12 +1402,12 @@ const ViewRequestScreen = ({ navigation }) => {
     </ScrollView>
   );
 };
-const ChoosePaymentScreen = ({ navigation }) => {
+const ChoosePaymentScreen = ({navigation}) => {
   return (
     <View style={styles.Background}>
       <TouchableOpacity
         onPress={() => navigation.dispatch(StackActions.pop(1))}>
-        <View style={{ marginLeft: '5%', marginTop: '5%', flexDirection: 'row' }}>
+        <View style={{marginLeft: '5%', marginTop: '5%', flexDirection: 'row'}}>
           <Ionicons name={'arrow-back-sharp'} size={25} color={'white'} />
           <Text
             style={{
@@ -1436,7 +1437,7 @@ const ChoosePaymentScreen = ({ navigation }) => {
           List of all your credit cards
         </Text>
       </View>
-      <View style={{ alignItems: 'center' }}>
+      <View style={{alignItems: 'center'}}>
         <View
           style={{
             height: 161,
@@ -1448,7 +1449,7 @@ const ChoosePaymentScreen = ({ navigation }) => {
           }}>
           <Image
             source={require('./assets/images/paymentPicture.png')}
-            style={{ width: 227, height: 161 }}
+            style={{width: 227, height: 161}}
           />
         </View>
         <View
@@ -1462,7 +1463,7 @@ const ChoosePaymentScreen = ({ navigation }) => {
           }}>
           <Image
             source={require('./assets/images/Mastercard.png')}
-            style={{ height: 25, width: 45, marginLeft: '75%', marginTop: '10%' }}
+            style={{height: 25, width: 45, marginLeft: '75%', marginTop: '10%'}}
           />
           <View
             style={{
@@ -1480,7 +1481,7 @@ const ChoosePaymentScreen = ({ navigation }) => {
                 3254-6754-0001-5654
               </Text>
             </View>
-            <View style={{ marginLeft: '20%' }}>
+            <View style={{marginLeft: '20%'}}>
               <Text
                 style={{
                   color: '#FFFFFF',
@@ -1526,7 +1527,7 @@ const ChoosePaymentScreen = ({ navigation }) => {
             </TouchableOpacity>
           </View>
         </View>
-        <View style={{ flexDirection: 'row' }}>
+        <View style={{flexDirection: 'row'}}>
           <View
             style={{
               height: 8,
@@ -1586,12 +1587,12 @@ const ChoosePaymentScreen = ({ navigation }) => {
           </View>
         </TouchableOpacity>
         <TouchableOpacity>
-          <View style={{ flexDirection: 'row', margin: '7%' }}>
+          <View style={{flexDirection: 'row', margin: '7%'}}>
             <AntDesign
               name={'pluscircleo'}
               size={10}
               color={'#FFFFFF'}
-              style={{ marginTop: '2%' }}
+              style={{marginTop: '2%'}}
             />
             <Text
               style={{
@@ -1609,12 +1610,12 @@ const ChoosePaymentScreen = ({ navigation }) => {
   );
 };
 
-const AddPaymentScreen = ({ navigation }) => {
+const AddPaymentScreen = ({navigation}) => {
   return (
     <View style={styles.Background}>
       <TouchableOpacity
         onPress={() => navigation.dispatch(StackActions.pop(1))}>
-        <View style={{ marginLeft: '5%', marginTop: '5%', flexDirection: 'row' }}>
+        <View style={{marginLeft: '5%', marginTop: '5%', flexDirection: 'row'}}>
           <Ionicons name={'arrow-back-sharp'} size={25} color={'white'} />
           <Text
             style={{
@@ -1644,7 +1645,7 @@ const AddPaymentScreen = ({ navigation }) => {
           Provide your credit card information
         </Text>
       </View>
-      <View style={{ alignItems: 'center' }}>
+      <View style={{alignItems: 'center'}}>
         <View
           style={{
             height: 161,
@@ -1656,7 +1657,7 @@ const AddPaymentScreen = ({ navigation }) => {
           }}>
           <Image
             source={require('./assets/images/paymentPicture.png')}
-            style={{ width: 227, height: 161 }}
+            style={{width: 227, height: 161}}
           />
         </View>
         <View
@@ -1683,7 +1684,7 @@ const AddPaymentScreen = ({ navigation }) => {
               marginTop: '3%',
               justifyContent: 'center',
             }}>
-            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+            <View style={{flexDirection: 'row', alignItems: 'center'}}>
               <Image
                 source={require('./assets/images/Mastercard.png')}
                 style={{
@@ -1715,7 +1716,7 @@ const AddPaymentScreen = ({ navigation }) => {
             width: '67%',
             height: '15%',
           }}>
-          <View style={{ flexDirection: 'row' }}>
+          <View style={{flexDirection: 'row'}}>
             <Text
               style={{
                 color: '#FFFFFF',
@@ -1768,13 +1769,13 @@ const AddPaymentScreen = ({ navigation }) => {
                   inputMode={'numeric'}
                   maxLength={2}
                 />
-                <View style={{ marginLeft: '8%' }}>
+                <View style={{marginLeft: '8%'}}>
                   <SimpleLineIcons name={'arrow-up'} size={6} color={'white'} />
                   <SimpleLineIcons
                     name={'arrow-down'}
                     size={6}
                     color={'white'}
-                    style={{ marginTop: '-10%' }}
+                    style={{marginTop: '-10%'}}
                   />
                 </View>
               </View>
@@ -1818,13 +1819,13 @@ const AddPaymentScreen = ({ navigation }) => {
                   inputMode={'numeric'}
                   maxLength={4}
                 />
-                <View style={{ marginLeft: '8%' }}>
+                <View style={{marginLeft: '8%'}}>
                   <SimpleLineIcons name={'arrow-up'} size={6} color={'white'} />
                   <SimpleLineIcons
                     name={'arrow-down'}
                     size={6}
                     color={'white'}
-                    style={{ marginTop: '-10%' }}
+                    style={{marginTop: '-10%'}}
                   />
                 </View>
               </View>
@@ -1896,10 +1897,10 @@ const AddPaymentScreen = ({ navigation }) => {
     </View>
   );
 };
-const CartScreen = ({ navigation }) => {
+const CartScreen = ({navigation}) => {
   return (
     <View style={styles.Background}>
-      <View style={{ marginLeft: '5%', marginTop: '5%', flexDirection: 'row' }}>
+      <View style={{marginLeft: '5%', marginTop: '5%', flexDirection: 'row'}}>
         <TouchableOpacity
           onPress={() => navigation.dispatch(StackActions.pop(1))}>
           <Ionicons name={'arrow-back-sharp'} size={25} color={'white'} />
@@ -1916,7 +1917,7 @@ const CartScreen = ({ navigation }) => {
         </Text>
         <Image
           source={require('./assets/images/ShoppingCart.png')}
-          style={{ height: 25, width: 25, marginLeft: '1%', marginTop: '0.25%' }}
+          style={{height: 25, width: 25, marginLeft: '1%', marginTop: '0.25%'}}
         />
       </View>
 
@@ -1931,7 +1932,7 @@ const CartScreen = ({ navigation }) => {
         }}
       />
 
-      <View style={{ alignItems: 'center' }}>
+      <View style={{alignItems: 'center'}}>
         <View
           style={{
             width: '67%',
@@ -1947,7 +1948,7 @@ const CartScreen = ({ navigation }) => {
               marginVertical: '8%',
               justifyContent: 'center',
             }}>
-            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+            <View style={{flexDirection: 'row', alignItems: 'center'}}>
               <Image
                 source={require('./assets/images/rtx4090.png')}
                 style={{
@@ -2003,7 +2004,7 @@ const CartScreen = ({ navigation }) => {
               marginVertical: '8%',
               justifyContent: 'center',
             }}>
-            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+            <View style={{flexDirection: 'row', alignItems: 'center'}}>
               <Image
                 source={require('./assets/images/rtx4090.png')}
                 style={{
@@ -2059,7 +2060,7 @@ const CartScreen = ({ navigation }) => {
               marginVertical: '8%',
               justifyContent: 'center',
             }}>
-            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+            <View style={{flexDirection: 'row', alignItems: 'center'}}>
               <Image
                 source={require('./assets/images/rtx4090.png')}
                 style={{
@@ -2156,7 +2157,7 @@ const CartScreen = ({ navigation }) => {
               </Text>
               <Image
                 source={require('./assets/images/ArrowRight.png')}
-                style={{ height: 20, width: 20, marginLeft: '2%' }}
+                style={{height: 20, width: 20, marginLeft: '2%'}}
               />
             </View>
           </TouchableOpacity>
@@ -2169,39 +2170,39 @@ const CartScreen = ({ navigation }) => {
 const AddProducts = () => {
   // const [message, setMessage] = useState('');
 
-
   return (
-    <View style={{ flex: 1, backgroundColor: 'black', }}>
-
-
-
+    <View style={{flex: 1, backgroundColor: 'black'}}>
       <ScrollView>
         <View style={styles.titleContainer}>
           <Text style={styles.title}>Add Products</Text>
         </View>
 
-
-
-
-        <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 30 }}>
+        <View
+          style={{
+            justifyContent: 'center',
+            alignItems: 'center',
+            marginTop: 30,
+          }}>
           <TouchableOpacity style={styles.buttonOrange}>
             <Text style={styles.buttonOrangeText}>Manual Entry</Text>
           </TouchableOpacity>
         </View>
 
-        <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 40, marginBottom: 50 }}>
+        <View
+          style={{
+            justifyContent: 'center',
+            alignItems: 'center',
+            marginTop: 40,
+            marginBottom: 50,
+          }}>
           <TouchableOpacity style={styles.buttonWhite}>
             <Text style={styles.buttonWhiteText}>Via Barcode</Text>
           </TouchableOpacity>
         </View>
 
-
-
         {/* <ImageBackground source={require('./images/brownhue.png')} resizeMode="cover" style={styles.image} >
 
         </ImageBackground> */}
-
-
       </ScrollView>
     </View>
   );
@@ -2209,11 +2210,10 @@ const AddProducts = () => {
 
 //Tayyab Screens
 
-const AddProductsBarcode = ({ navigation }) => {
+const AddProductsBarcode = ({navigation}) => {
   return (
     <View style={styles.Background}>
-
-      <View style={{ marginLeft: '5%', marginTop: '5%' }}>
+      <View style={{marginLeft: '5%', marginTop: '5%'}}>
         <TouchableOpacity
           onPress={() => navigation.dispatch(StackActions.pop(1))}>
           <Ionicons name={'arrow-back-sharp'} size={25} color={'white'} />
@@ -2232,30 +2232,53 @@ const AddProductsBarcode = ({ navigation }) => {
         Add Products
       </Text>
 
-      <View style={{ height: 490, width: 317, marginLeft: 'auto', marginRight: 'auto', justifyContent: 'center', alignItems: 'center', alignContent: 'center', backgroundColor: 'white', marginTop: 20, borderRadius: 18 }}>
-
+      <View
+        style={{
+          height: 490,
+          width: 317,
+          marginLeft: 'auto',
+          marginRight: 'auto',
+          justifyContent: 'center',
+          alignItems: 'center',
+          alignContent: 'center',
+          backgroundColor: 'white',
+          marginTop: 20,
+          borderRadius: 18,
+        }}>
         <Image
           source={require('./assets/images/Barcode.png')}
-          style={{ width: 250, height: 250 }}
+          style={{width: 250, height: 250}}
         />
-        <Text style={{ fontFamily: 'Outfit-Bold', fontSize: 16, marginTop: 20 }}>Scan barcode to add a product</Text>
+        <Text style={{fontFamily: 'Outfit-Bold', fontSize: 16, marginTop: 20}}>
+          Scan barcode to add a product
+        </Text>
       </View>
 
       <TouchableOpacity>
-        <View style={{ height: 50, width: 50, marginTop: 20, backgroundColor: '#E56033', borderRadius: 50, marginLeft: 'auto', marginRight: 'auto', justifyContent: 'center', alignItems: 'center', alignContent: 'center' }}>
+        <View
+          style={{
+            height: 50,
+            width: 50,
+            marginTop: 20,
+            backgroundColor: '#E56033',
+            borderRadius: 50,
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            justifyContent: 'center',
+            alignItems: 'center',
+            alignContent: 'center',
+          }}>
           <Ionicons name={'camera-outline'} size={25} color={'black'} />
         </View>
       </TouchableOpacity>
-
     </View>
   );
 };
 
-const AddToHistoryImage = ({ navigation }) => {
+const AddToHistoryImage = ({navigation}) => {
   return (
     <View style={styles.Background}>
-
-      <View style={{ marginLeft: '5%', marginTop: '5%' }}>
+      <View style={{marginLeft: '5%', marginTop: '5%'}}>
         <TouchableOpacity
           onPress={() => navigation.dispatch(StackActions.pop(1))}>
           <Ionicons name={'arrow-back-sharp'} size={25} color={'white'} />
@@ -2274,52 +2297,78 @@ const AddToHistoryImage = ({ navigation }) => {
         Add To History
       </Text>
 
-      <View style={{ height: 490, width: 317, marginLeft: 'auto', marginRight: 'auto', justifyContent: 'center', alignItems: 'center', alignContent: 'center', backgroundColor: 'white', marginTop: 20, borderRadius: 18 }}>
-
-
-        <Text style={{ fontFamily: 'Outfit-Bold', fontSize: 16, marginTop: 330, maxWidth: 250, textAlign: 'center' }}>Take a picture of receipt to add to history or upload</Text>
+      <View
+        style={{
+          height: 490,
+          width: 317,
+          marginLeft: 'auto',
+          marginRight: 'auto',
+          justifyContent: 'center',
+          alignItems: 'center',
+          alignContent: 'center',
+          backgroundColor: 'white',
+          marginTop: 20,
+          borderRadius: 18,
+        }}>
+        <Text
+          style={{
+            fontFamily: 'Outfit-Bold',
+            fontSize: 16,
+            marginTop: 330,
+            maxWidth: 250,
+            textAlign: 'center',
+          }}>
+          Take a picture of receipt to add to history or upload
+        </Text>
       </View>
 
       <TouchableOpacity>
-        <View style={{ height: 50, width: 50, marginTop: 20, backgroundColor: '#E56033', borderRadius: 50, marginLeft: 'auto', marginRight: 'auto', justifyContent: 'center', alignItems: 'center', alignContent: 'center' }}>
+        <View
+          style={{
+            height: 50,
+            width: 50,
+            marginTop: 20,
+            backgroundColor: '#E56033',
+            borderRadius: 50,
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            justifyContent: 'center',
+            alignItems: 'center',
+            alignContent: 'center',
+          }}>
           <Ionicons name={'camera-outline'} size={25} color={'black'} />
         </View>
       </TouchableOpacity>
-
     </View>
   );
 };
 
-const AddProductsManually = ({ navigation }) => {
-
+const AddProductsManually = ({navigation}) => {
   const [open, setOpen] = useState(false);
   const [open1, setOpen1] = useState(false);
   const [value, setValue] = useState(null);
   const [value1, setValue1] = useState(null);
   const [value2, setValue2] = useState(null);
   const [items, setItems] = useState([
-    { label: 'Sneakers', value: 'sneakers' },
-    { label: 'T-Shirts', value: 'tshirts' },
-  ])
+    {label: 'Sneakers', value: 'sneakers'},
+    {label: 'T-Shirts', value: 'tshirts'},
+  ]);
   const [items1, setItems1] = useState([
-    { label: 'One', value: 'one' },
-    { label: 'Breakout', value: 'breakout' },
+    {label: 'One', value: 'one'},
+    {label: 'Breakout', value: 'breakout'},
   ]);
 
-
-
   return (
-    <View style={{ flex: 1, backgroundColor: 'black', }}>
+    <View style={{flex: 1, backgroundColor: 'black'}}>
       <ScrollView>
-
-
         <View style={styles.titleContainer}>
           <Text style={styles.title}>Add Products</Text>
-          <Text style={{ color: 'white', marginTop: 4 }}>Provide all the information about the product</Text>
+          <Text style={{color: 'white', marginTop: 4}}>
+            Provide all the information about the product
+          </Text>
         </View>
 
-
-        <View style={{ marginTop: 50 }}>
+        <View style={{marginTop: 50}}>
           <Text style={styles.title2}>Product Name</Text>
           <TextInput
             placeholderTextColor={'black'}
@@ -2328,11 +2377,15 @@ const AddProductsManually = ({ navigation }) => {
           />
         </View>
 
-        <View style={{ marginTop: 70 }}>
+        <View style={{marginTop: 70}}>
           <Text style={styles.title2}>Category</Text>
-          <DropDownPicker style={styles.dropDown} dropDownContainerStyle={{
-            backgroundColor: "#E56033", maxWidth: 288, marginLeft: 56,
-          }}
+          <DropDownPicker
+            style={styles.dropDown}
+            dropDownContainerStyle={{
+              backgroundColor: '#E56033',
+              maxWidth: 288,
+              marginLeft: 56,
+            }}
             open={open}
             value={value}
             items={items}
@@ -2342,11 +2395,15 @@ const AddProductsManually = ({ navigation }) => {
           />
         </View>
 
-        <View style={{ marginTop: 70 }}>
+        <View style={{marginTop: 70}}>
           <Text style={styles.title2}>Brand</Text>
-          <DropDownPicker style={styles.dropDown} dropDownContainerStyle={{
-            backgroundColor: "#E56033", maxWidth: 288, marginLeft: 56,
-          }}
+          <DropDownPicker
+            style={styles.dropDown}
+            dropDownContainerStyle={{
+              backgroundColor: '#E56033',
+              maxWidth: 288,
+              marginLeft: 56,
+            }}
             open={open1}
             value={value1}
             items={items1}
@@ -2356,7 +2413,7 @@ const AddProductsManually = ({ navigation }) => {
           />
         </View>
 
-        <View style={{ marginTop: 70 }}>
+        <View style={{marginTop: 70}}>
           <Text style={styles.title2}>Description</Text>
           <TextInput
             placeholderTextColor={'black'}
@@ -2364,15 +2421,24 @@ const AddProductsManually = ({ navigation }) => {
           />
         </View>
 
-        <View style={{ flexDirection: 'row', marginTop: 70, justifyContent: 'center', alignItems: 'center' }}>
-          <Text style={{
-            fontFamily: 'outfit',
-            textAlign: 'left',
-            fontSize: 18,
-            fontWeight: 'bold',
-            color: 'white',
-            marginRight: 10
-          }}>Quantity</Text>
+        <View
+          style={{
+            flexDirection: 'row',
+            marginTop: 70,
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}>
+          <Text
+            style={{
+              fontFamily: 'outfit',
+              textAlign: 'left',
+              fontSize: 18,
+              fontWeight: 'bold',
+              color: 'white',
+              marginRight: 10,
+            }}>
+            Quantity
+          </Text>
           <NumericInput
             value={value2}
             onChange={setValue2 => value2}
@@ -2383,72 +2449,65 @@ const AddProductsManually = ({ navigation }) => {
             borderColor={'#E56033'}
             separatorWidth={1}
             minValue={1}
-            valueType='real'
-            textColor='white'
-            iconStyle={{ color: 'white' }}
-            rightButtonBackgroundColor='#E56033'
-            leftButtonBackgroundColor='#E56033'
-
+            valueType="real"
+            textColor="white"
+            iconStyle={{color: 'white'}}
+            rightButtonBackgroundColor="#E56033"
+            leftButtonBackgroundColor="#E56033"
           />
         </View>
 
         <TouchableOpacity>
-          <View style={{
-            justifyContent: 'center',
-            alignItems: 'center',
-            width: 275,
-            marginTop: 60,
-            height: 63,
-            borderRadius: 50,
-            marginLeft: 'auto',
-            marginRight: 'auto',
-            backgroundColor: 'transparent',
-            borderRadius: 50,
-            borderWidth: 3,
-            borderColor: '#E56033'
-          }}>
-            <Text style={{ color: 'white', fontSize: 20, fontWeight: '600' }}>Add Product</Text>
+          <View
+            style={{
+              justifyContent: 'center',
+              alignItems: 'center',
+              width: 275,
+              marginTop: 60,
+              height: 63,
+              marginLeft: 'auto',
+              marginRight: 'auto',
+              backgroundColor: 'transparent',
+              borderRadius: 50,
+              borderWidth: 3,
+              borderColor: '#E56033',
+            }}>
+            <Text style={{color: 'white', fontSize: 20, fontWeight: '600'}}>
+              Add Product
+            </Text>
           </View>
         </TouchableOpacity>
-
-
-
-      </ScrollView >
-
-    </View >
+      </ScrollView>
+    </View>
   );
 };
 
-const AddToHistoryManually = ({ navigation }) => {
-
+const AddToHistoryManually = ({navigation}) => {
   const [open, setOpen] = useState(false);
   const [open1, setOpen1] = useState(false);
   const [value, setValue] = useState(null);
   const [value1, setValue1] = useState(null);
   const [value2, setValue2] = useState(null);
   const [items, setItems] = useState([
-    { label: 'Sneakers', value: 'sneakers' },
-    { label: 'T-Shirts', value: 'tshirts' },
-  ])
+    {label: 'Sneakers', value: 'sneakers'},
+    {label: 'T-Shirts', value: 'tshirts'},
+  ]);
   const [items1, setItems1] = useState([
-    { label: 'One', value: 'one' },
-    { label: 'Breakout', value: 'breakout' },
+    {label: 'One', value: 'one'},
+    {label: 'Breakout', value: 'breakout'},
   ]);
 
-
-
   return (
-    <View style={{ flex: 1, backgroundColor: 'black', }}>
+    <View style={{flex: 1, backgroundColor: 'black'}}>
       <ScrollView>
-
-
         <View style={styles.titleContainer}>
           <Text style={styles.title}>Add To History</Text>
-          <Text style={{ color: 'white', marginTop: 4 }}>Provide all the information about the History</Text>
+          <Text style={{color: 'white', marginTop: 4}}>
+            Provide all the information about the History
+          </Text>
         </View>
 
-
-        <View style={{ marginTop: 50 }}>
+        <View style={{marginTop: 50}}>
           <Text style={styles.title2}>Product Name</Text>
           <TextInput
             placeholderTextColor={'black'}
@@ -2457,11 +2516,15 @@ const AddToHistoryManually = ({ navigation }) => {
           />
         </View>
 
-        <View style={{ marginTop: 70 }}>
+        <View style={{marginTop: 70}}>
           <Text style={styles.title2}>Category</Text>
-          <DropDownPicker style={styles.dropDown} dropDownContainerStyle={{
-            backgroundColor: "#E56033", maxWidth: 288, marginLeft: 56,
-          }}
+          <DropDownPicker
+            style={styles.dropDown}
+            dropDownContainerStyle={{
+              backgroundColor: '#E56033',
+              maxWidth: 288,
+              marginLeft: 56,
+            }}
             open={open}
             value={value}
             items={items}
@@ -2471,11 +2534,15 @@ const AddToHistoryManually = ({ navigation }) => {
           />
         </View>
 
-        <View style={{ marginTop: 70 }}>
+        <View style={{marginTop: 70}}>
           <Text style={styles.title2}>Brand</Text>
-          <DropDownPicker style={styles.dropDown} dropDownContainerStyle={{
-            backgroundColor: "#E56033", maxWidth: 288, marginLeft: 56,
-          }}
+          <DropDownPicker
+            style={styles.dropDown}
+            dropDownContainerStyle={{
+              backgroundColor: '#E56033',
+              maxWidth: 288,
+              marginLeft: 56,
+            }}
             open={open1}
             value={value1}
             items={items1}
@@ -2485,7 +2552,7 @@ const AddToHistoryManually = ({ navigation }) => {
           />
         </View>
 
-        <View style={{ marginTop: 70 }}>
+        <View style={{marginTop: 70}}>
           <Text style={styles.title2}>Description</Text>
           <TextInput
             placeholderTextColor={'black'}
@@ -2494,20 +2561,49 @@ const AddToHistoryManually = ({ navigation }) => {
         </View>
 
         <TouchableOpacity>
-          <View style={{ height: 40, width: 40, marginTop: 20, backgroundColor: '#E56033', borderRadius: 50, marginLeft: 330, justifyContent: 'center', alignItems: 'center', alignContent: 'center' }}>
-            <Text style={{ color: 'white', textAlign: 'center', fontSize: 30, marginBottom: 12, justifyContent: 'center' }}>+</Text>
+          <View
+            style={{
+              height: 40,
+              width: 40,
+              marginTop: 20,
+              backgroundColor: '#E56033',
+              borderRadius: 50,
+              marginLeft: 330,
+              justifyContent: 'center',
+              alignItems: 'center',
+              alignContent: 'center',
+            }}>
+            <Text
+              style={{
+                color: 'white',
+                textAlign: 'center',
+                fontSize: 30,
+                marginBottom: 12,
+                justifyContent: 'center',
+              }}>
+              +
+            </Text>
           </View>
         </TouchableOpacity>
 
-        <View style={{ flexDirection: 'row', marginTop: 70, justifyContent: 'center', alignItems: 'center' }}>
-          <Text style={{
-            fontFamily: 'outfit',
-            textAlign: 'left',
-            fontSize: 18,
-            fontWeight: 'bold',
-            color: 'white',
-            marginRight: 10
-          }}>Quantity</Text>
+        <View
+          style={{
+            flexDirection: 'row',
+            marginTop: 70,
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}>
+          <Text
+            style={{
+              fontFamily: 'outfit',
+              textAlign: 'left',
+              fontSize: 18,
+              fontWeight: 'bold',
+              color: 'white',
+              marginRight: 10,
+            }}>
+            Quantity
+          </Text>
           <NumericInput
             value={value2}
             onChange={setValue2 => value2}
@@ -2518,73 +2614,71 @@ const AddToHistoryManually = ({ navigation }) => {
             borderColor={'#E56033'}
             separatorWidth={1}
             minValue={1}
-            valueType='real'
-            textColor='white'
-            iconStyle={{ color: 'white' }}
-            rightButtonBackgroundColor='#E56033'
-            leftButtonBackgroundColor='#E56033'
-
+            valueType="real"
+            textColor="white"
+            iconStyle={{color: 'white'}}
+            rightButtonBackgroundColor="#E56033"
+            leftButtonBackgroundColor="#E56033"
           />
         </View>
 
         <TouchableOpacity>
-          <View style={{
-            justifyContent: 'center',
-            alignItems: 'center',
-            width: 275,
-            marginTop: 60,
-            height: 63,
-            borderRadius: 50,
-            marginLeft: 'auto',
-            marginRight: 'auto',
-            backgroundColor: 'transparent',
-            borderRadius: 50,
-            borderWidth: 3,
-            borderColor: '#E56033'
-          }}>
-            <Text style={{ color: 'white', fontSize: 20, fontWeight: '600' }}>Add To History</Text>
+          <View
+            style={{
+              justifyContent: 'center',
+              alignItems: 'center',
+              width: 275,
+              marginTop: 60,
+              height: 63,
+              marginLeft: 'auto',
+              marginRight: 'auto',
+              backgroundColor: 'transparent',
+              borderRadius: 50,
+              borderWidth: 3,
+              borderColor: '#E56033',
+            }}>
+            <Text style={{color: 'white', fontSize: 20, fontWeight: '600'}}>
+              Add To History
+            </Text>
           </View>
         </TouchableOpacity>
-
-
-
-      </ScrollView >
-
-    </View >
+      </ScrollView>
+    </View>
   );
 };
 
 const AddToHistory = () => {
-
-
   return (
     <View style={styles.Background}>
-
-
-
       <ScrollView>
         <View style={styles.titleContainer}>
           <Text style={styles.title}>Add To History</Text>
         </View>
 
-
-
-
-        <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 30 }}>
+        <View
+          style={{
+            justifyContent: 'center',
+            alignItems: 'center',
+            marginTop: 30,
+          }}>
           <TouchableOpacity style={styles.buttonOrange}>
             <Text style={styles.buttonOrangeText}>Manual Entry</Text>
           </TouchableOpacity>
         </View>
 
-        <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 40, marginBottom: 50 }}>
+        <View
+          style={{
+            justifyContent: 'center',
+            alignItems: 'center',
+            marginTop: 40,
+            marginBottom: 50,
+          }}>
           <TouchableOpacity style={styles.buttonWhite}>
             <Text style={styles.buttonWhiteText}>Via Image</Text>
           </TouchableOpacity>
         </View>
-
-
-      </ScrollView >
-    </View >
+      </ScrollView>
+    </View>
   );
 };
 
@@ -2592,110 +2686,237 @@ const SellingHistory = () => {
   return (
     <View style={styles.Background}>
       <ScrollView>
-
-        <View >
-          <Text style={{
-            fontFamily: 'Outfit-Regular',
-            textAlign: 'left',
-            marginLeft: 56,
-            fontSize: 23,
-            marginTop: 20,
-            fontWeight: 'bold',
-            color: 'white',
-          }}>Selling History</Text>
+        <View>
+          <Text
+            style={{
+              fontFamily: 'Outfit-Regular',
+              textAlign: 'left',
+              marginLeft: 56,
+              fontSize: 23,
+              marginTop: 20,
+              fontWeight: 'bold',
+              color: 'white',
+            }}>
+            Selling History
+          </Text>
         </View>
 
-        <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', marginTop: 45 }}>
-          <Text style={{ color: '#E56033', fontSize: 18, textDecorationLine: 'underline', fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
+        <View
+          style={{
+            flexDirection: 'row',
+            justifyContent: 'space-evenly',
+            marginTop: 45,
+          }}>
+          <Text
+            style={{
+              color: '#E56033',
+              fontSize: 18,
+              textDecorationLine: 'underline',
+              fontWeight: '500',
+              fontFamily: 'Outfit-Regular',
+            }}>
             Week
           </Text>
-          <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
+          <Text
+            style={{
+              color: 'white',
+              fontSize: 18,
+              fontWeight: '500',
+              fontFamily: 'Outfit-Regular',
+            }}>
             Month
           </Text>
-          <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
+          <Text
+            style={{
+              color: 'white',
+              fontSize: 18,
+              fontWeight: '500',
+              fontFamily: 'Outfit-Regular',
+            }}>
             Year
           </Text>
         </View>
 
-        <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', marginTop: 20 }}>
-          <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
+        <View
+          style={{
+            flexDirection: 'row',
+            justifyContent: 'space-evenly',
+            marginTop: 20,
+          }}>
+          <Text
+            style={{
+              color: 'white',
+              fontSize: 18,
+              fontWeight: '500',
+              fontFamily: 'Outfit-Regular',
+            }}>
             Date/Order ID
           </Text>
-          <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
+          <Text
+            style={{
+              color: 'white',
+              fontSize: 18,
+              fontWeight: '500',
+              fontFamily: 'Outfit-Regular',
+            }}>
             Amount
           </Text>
         </View>
 
-        <View style={{
-          justifyContent: 'center',
-          alignItems: 'center',
-          width: 250,
-          height: 3,
-          marginTop: 40,
-          marginBottom: 10,
-          borderRadius: 50,
-          marginLeft: 'auto',
-          marginRight: 'auto',
-          backgroundColor: '#E56033',
-        }}>
-        </View>
+        <View
+          style={{
+            justifyContent: 'center',
+            alignItems: 'center',
+            width: 250,
+            height: 3,
+            marginTop: 40,
+            marginBottom: 10,
+            borderRadius: 50,
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            backgroundColor: '#E56033',
+          }}
+        />
 
-        <View style={{ flexDirection: 'row', justifyContent: 'space-evenly' }}>
-          <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
+        <View style={{flexDirection: 'row', justifyContent: 'space-evenly'}}>
+          <Text
+            style={{
+              color: 'white',
+              fontSize: 18,
+              fontWeight: '500',
+              fontFamily: 'Outfit-Regular',
+            }}>
             9 Sept, 2022
           </Text>
-          <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
+          <Text
+            style={{
+              color: 'white',
+              fontSize: 18,
+              fontWeight: '500',
+              fontFamily: 'Outfit-Regular',
+            }}>
             Rs 2,000
           </Text>
         </View>
 
-        <View style={{ marginLeft: 75 }}>
-          <Text style={{ color: 'white', fontSize: 13, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
+        <View style={{marginLeft: 75}}>
+          <Text
+            style={{
+              color: 'white',
+              fontSize: 13,
+              fontWeight: '500',
+              fontFamily: 'Outfit-Regular',
+            }}>
             XFX1234
           </Text>
         </View>
 
-
-        <View style={{ backgroundColor: '#242222', marginTop: 200, borderRadius: 40, width: 412, height: 250 }}>
-          <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular', marginTop: 30, marginLeft: 15 }}>
+        <View
+          style={{
+            backgroundColor: '#242222',
+            marginTop: 200,
+            borderRadius: 40,
+            width: 412,
+            height: 250,
+          }}>
+          <Text
+            style={{
+              color: 'white',
+              fontSize: 18,
+              fontWeight: '500',
+              fontFamily: 'Outfit-Regular',
+              marginTop: 30,
+              marginLeft: 15,
+            }}>
             Latest Orders
           </Text>
 
-          <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', marginTop: 13 }}>
-            <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'space-evenly',
+              marginTop: 13,
+            }}>
+            <Text
+              style={{
+                color: 'white',
+                fontSize: 18,
+                fontWeight: '500',
+                fontFamily: 'Outfit-Regular',
+              }}>
               09 september, 2022
             </Text>
-            <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
+            <Text
+              style={{
+                color: 'white',
+                fontSize: 18,
+                fontWeight: '500',
+                fontFamily: 'Outfit-Regular',
+              }}>
               Rs 2,000
             </Text>
           </View>
 
-          <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', marginTop: 15 }}>
-            <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'space-evenly',
+              marginTop: 15,
+            }}>
+            <Text
+              style={{
+                color: 'white',
+                fontSize: 18,
+                fontWeight: '500',
+                fontFamily: 'Outfit-Regular',
+              }}>
               16 october, 2022
             </Text>
-            <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
+            <Text
+              style={{
+                color: 'white',
+                fontSize: 18,
+                fontWeight: '500',
+                fontFamily: 'Outfit-Regular',
+              }}>
               Rs 55,000
             </Text>
           </View>
 
-          <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', marginTop: 15 }}>
-            <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'space-evenly',
+              marginTop: 15,
+            }}>
+            <Text
+              style={{
+                color: 'white',
+                fontSize: 18,
+                fontWeight: '500',
+                fontFamily: 'Outfit-Regular',
+              }}>
               01 August, 2022
             </Text>
-            <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
+            <Text
+              style={{
+                color: 'white',
+                fontSize: 18,
+                fontWeight: '500',
+                fontFamily: 'Outfit-Regular',
+              }}>
               Rs 10,000
             </Text>
           </View>
 
-
-          <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', marginTop: 15 }}>
-
-
-          </View>
-
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'space-evenly',
+              marginTop: 15,
+            }}
+          />
         </View>
-
       </ScrollView>
     </View>
   );
@@ -2705,117 +2926,263 @@ const ShoppingHistory = () => {
   return (
     <View style={styles.Background}>
       <ScrollView>
-
-        <View >
-          <Text style={{
-            fontFamily: 'Outfit-Regular',
-            textAlign: 'left',
-            marginLeft: 56,
-            fontSize: 23,
-            marginTop: 20,
-            fontWeight: 'bold',
-            color: 'white',
-          }}>Shopping History</Text>
+        <View>
+          <Text
+            style={{
+              fontFamily: 'Outfit-Regular',
+              textAlign: 'left',
+              marginLeft: 56,
+              fontSize: 23,
+              marginTop: 20,
+              fontWeight: 'bold',
+              color: 'white',
+            }}>
+            Shopping History
+          </Text>
         </View>
 
-        <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', marginTop: 45 }}>
-          <Text style={{ color: '#E56033', fontSize: 18, textDecorationLine: 'underline', fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
+        <View
+          style={{
+            flexDirection: 'row',
+            justifyContent: 'space-evenly',
+            marginTop: 45,
+          }}>
+          <Text
+            style={{
+              color: '#E56033',
+              fontSize: 18,
+              textDecorationLine: 'underline',
+              fontWeight: '500',
+              fontFamily: 'Outfit-Regular',
+            }}>
             Week
           </Text>
-          <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
+          <Text
+            style={{
+              color: 'white',
+              fontSize: 18,
+              fontWeight: '500',
+              fontFamily: 'Outfit-Regular',
+            }}>
             Month
           </Text>
-          <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
+          <Text
+            style={{
+              color: 'white',
+              fontSize: 18,
+              fontWeight: '500',
+              fontFamily: 'Outfit-Regular',
+            }}>
             Year
           </Text>
         </View>
 
-        <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', marginTop: 20 }}>
-          <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
+        <View
+          style={{
+            flexDirection: 'row',
+            justifyContent: 'space-evenly',
+            marginTop: 20,
+          }}>
+          <Text
+            style={{
+              color: 'white',
+              fontSize: 18,
+              fontWeight: '500',
+              fontFamily: 'Outfit-Regular',
+            }}>
             Date/Order ID
           </Text>
-          <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
+          <Text
+            style={{
+              color: 'white',
+              fontSize: 18,
+              fontWeight: '500',
+              fontFamily: 'Outfit-Regular',
+            }}>
             Amount
           </Text>
         </View>
 
+        <View
+          style={{
+            justifyContent: 'center',
+            alignItems: 'center',
+            width: 250,
+            height: 3,
+            marginTop: 40,
+            marginBottom: 10,
+            borderRadius: 50,
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            backgroundColor: '#E56033',
+          }}
+        />
 
-        <View style={{
-          justifyContent: 'center',
-          alignItems: 'center',
-          width: 250,
-          height: 3,
-          marginTop: 40,
-          marginBottom: 10,
-          borderRadius: 50,
-          marginLeft: 'auto',
-          marginRight: 'auto',
-          backgroundColor: '#E56033',
-        }}>
-        </View>
-
-        <View style={{ flexDirection: 'row', justifyContent: 'space-evenly' }}>
-          <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
+        <View style={{flexDirection: 'row', justifyContent: 'space-evenly'}}>
+          <Text
+            style={{
+              color: 'white',
+              fontSize: 18,
+              fontWeight: '500',
+              fontFamily: 'Outfit-Regular',
+            }}>
             9 Sept, 2022
           </Text>
-          <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
+          <Text
+            style={{
+              color: 'white',
+              fontSize: 18,
+              fontWeight: '500',
+              fontFamily: 'Outfit-Regular',
+            }}>
             Rs 2,000
           </Text>
         </View>
 
-        <View style={{ marginLeft: 75 }}>
-          <Text style={{ color: 'white', fontSize: 13, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
+        <View style={{marginLeft: 75}}>
+          <Text
+            style={{
+              color: 'white',
+              fontSize: 13,
+              fontWeight: '500',
+              fontFamily: 'Outfit-Regular',
+            }}>
             XFX1234
           </Text>
         </View>
 
         <TouchableOpacity>
-          <View style={{ height: 50, width: 50, marginTop: 20, backgroundColor: '#E56033', borderRadius: 50, marginLeft: 285, justifyContent: 'center', alignItems: 'center', alignContent: 'center' }}>
-            <Text style={{ color: 'white', textAlign: 'center', fontSize: 30, marginBottom: 2, justifyContent: 'center' }}>+</Text>
+          <View
+            style={{
+              height: 50,
+              width: 50,
+              marginTop: 20,
+              backgroundColor: '#E56033',
+              borderRadius: 50,
+              marginLeft: 285,
+              justifyContent: 'center',
+              alignItems: 'center',
+              alignContent: 'center',
+            }}>
+            <Text
+              style={{
+                color: 'white',
+                textAlign: 'center',
+                fontSize: 30,
+                marginBottom: 2,
+                justifyContent: 'center',
+              }}>
+              +
+            </Text>
           </View>
         </TouchableOpacity>
 
-
-        <View style={{ backgroundColor: '#242222', marginTop: 200, borderRadius: 40, width: 412, height: 250 }}>
-          <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular', marginTop: 30, marginLeft: 15 }}>
+        <View
+          style={{
+            backgroundColor: '#242222',
+            marginTop: 200,
+            borderRadius: 40,
+            width: 412,
+            height: 250,
+          }}>
+          <Text
+            style={{
+              color: 'white',
+              fontSize: 18,
+              fontWeight: '500',
+              fontFamily: 'Outfit-Regular',
+              marginTop: 30,
+              marginLeft: 15,
+            }}>
             Latest Orders
           </Text>
 
-          <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', marginTop: 13 }}>
-            <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'space-evenly',
+              marginTop: 13,
+            }}>
+            <Text
+              style={{
+                color: 'white',
+                fontSize: 18,
+                fontWeight: '500',
+                fontFamily: 'Outfit-Regular',
+              }}>
               09 september, 2022
             </Text>
-            <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
+            <Text
+              style={{
+                color: 'white',
+                fontSize: 18,
+                fontWeight: '500',
+                fontFamily: 'Outfit-Regular',
+              }}>
               Rs 2,000
             </Text>
           </View>
 
-          <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', marginTop: 15 }}>
-            <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'space-evenly',
+              marginTop: 15,
+            }}>
+            <Text
+              style={{
+                color: 'white',
+                fontSize: 18,
+                fontWeight: '500',
+                fontFamily: 'Outfit-Regular',
+              }}>
               16 october, 2022
             </Text>
-            <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
+            <Text
+              style={{
+                color: 'white',
+                fontSize: 18,
+                fontWeight: '500',
+                fontFamily: 'Outfit-Regular',
+              }}>
               Rs 55,000
             </Text>
           </View>
 
-          <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', marginTop: 15 }}>
-            <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'space-evenly',
+              marginTop: 15,
+            }}>
+            <Text
+              style={{
+                color: 'white',
+                fontSize: 18,
+                fontWeight: '500',
+                fontFamily: 'Outfit-Regular',
+              }}>
               01 August, 2022
             </Text>
-            <Text style={{ color: 'white', fontSize: 18, fontWeight: '500', fontFamily: 'Outfit-Regular' }}>
+            <Text
+              style={{
+                color: 'white',
+                fontSize: 18,
+                fontWeight: '500',
+                fontFamily: 'Outfit-Regular',
+              }}>
               Rs 10,000
             </Text>
           </View>
 
-
-          <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', marginTop: 15 }}>
-
-
-          </View>
-
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'space-evenly',
+              marginTop: 15,
+            }}
+          />
         </View>
-
       </ScrollView>
     </View>
   );
@@ -2825,206 +3192,432 @@ const SellProducts = () => {
   return (
     <View style={styles.Background}>
       <ScrollView>
-
-        <View style={{ flexDirection: 'row', justifyContent: 'space-evenly' }} >
-          <Text style={{
-            fontFamily: 'outfit',
-            textAlign: 'left',
-            fontSize: 23,
-            marginTop: 20,
-            fontWeight: 'bold',
-            color: 'white',
-          }}>Comercio
+        <View style={{flexDirection: 'row', justifyContent: 'space-evenly'}}>
+          <Text
+            style={{
+              fontFamily: 'outfit',
+              textAlign: 'left',
+              fontSize: 23,
+              marginTop: 20,
+              fontWeight: 'bold',
+              color: 'white',
+            }}>
+            Comercio
           </Text>
-          <TouchableOpacity style={{ height: 25, width: 25, marginLeft: '50%', marginTop: 20 }}>
+          <TouchableOpacity
+            style={{height: 25, width: 25, marginLeft: '50%', marginTop: 20}}>
             <Image
               source={require('./assets/images/ShoppingCart.png')}
-              style={{ height: 25, width: 25 }}
+              style={{height: 25, width: 25}}
             />
           </TouchableOpacity>
         </View>
 
-        <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', marginTop: 45 }}>
-          <Text style={{ color: '#E56033', fontSize: 18, textDecorationLine: 'underline', fontFamily: 'Outfit-Regular' }}>
+        <View
+          style={{
+            flexDirection: 'row',
+            justifyContent: 'space-evenly',
+            marginTop: 45,
+          }}>
+          <Text
+            style={{
+              color: '#E56033',
+              fontSize: 18,
+              textDecorationLine: 'underline',
+              fontFamily: 'Outfit-Regular',
+            }}>
             Products
           </Text>
-          <Text style={{ color: 'white', fontSize: 18, fontFamily: 'Outfit-Regular', marginLeft: 40 }}>
+          <Text
+            style={{
+              color: 'white',
+              fontSize: 18,
+              fontFamily: 'Outfit-Regular',
+              marginLeft: 40,
+            }}>
             Retailers
           </Text>
-
         </View>
 
-        <View style={{
-          backgroundColor: '#242222', marginTop: 10, borderRadius: 40, width: 356, height: 50, justifyContent: 'center', alignItems: 'center', alignContent: 'center', marginLeft: 'auto', marginRight: 'auto', flexDirection: 'row',
-        }}>
-
-          <Text style={{ color: 'white', fontSize: 18, fontFamily: 'Outfit-Regular', }}>
+        <View
+          style={{
+            backgroundColor: '#242222',
+            marginTop: 10,
+            borderRadius: 40,
+            width: 356,
+            height: 50,
+            justifyContent: 'center',
+            alignItems: 'center',
+            alignContent: 'center',
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            flexDirection: 'row',
+          }}>
+          <Text
+            style={{
+              color: 'white',
+              fontSize: 18,
+              fontFamily: 'Outfit-Regular',
+            }}>
             Search
           </Text>
-          <TouchableOpacity style={{ height: 24, width: 24, marginLeft: '60%' }}>
+          <TouchableOpacity style={{height: 24, width: 24, marginLeft: '60%'}}>
             <Image
               source={require('./assets/images/barcode1.png')}
-              style={{ height: 24, width: 24 }}
+              style={{height: 24, width: 24}}
             />
           </TouchableOpacity>
 
-          <TouchableOpacity style={{ height: 24, width: 24, marginLeft: 10 }}>
+          <TouchableOpacity style={{height: 24, width: 24, marginLeft: 10}}>
             <Image
               source={require('./assets/images/search.png')}
-              style={{ height: 24, width: 24 }}
+              style={{height: 24, width: 24}}
             />
           </TouchableOpacity>
-
         </View>
 
-        <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', marginTop: 20 }}>
-
-          <Text style={{ color: 'white', fontSize: 18, fontFamily: 'Outfit-Regular' }}>
+        <View
+          style={{
+            flexDirection: 'row',
+            justifyContent: 'space-evenly',
+            marginTop: 20,
+          }}>
+          <Text
+            style={{
+              color: 'white',
+              fontSize: 18,
+              fontFamily: 'Outfit-Regular',
+            }}>
             Your Products
           </Text>
 
           <TouchableOpacity>
-            <View style={{ backgroundColor: '#E56033', height: 31, width: 131, borderRadius: 9, marginLeft: 60 }}>
-              <Text style={{ color: 'white', fontSize: 18, fontFamily: 'Outfit-Regular', padding: 3 }}>
+            <View
+              style={{
+                backgroundColor: '#E56033',
+                height: 31,
+                width: 131,
+                borderRadius: 9,
+                marginLeft: 60,
+              }}>
+              <Text
+                style={{
+                  color: 'white',
+                  fontSize: 18,
+                  fontFamily: 'Outfit-Regular',
+                  padding: 3,
+                }}>
                 + Add Products
               </Text>
-
             </View>
           </TouchableOpacity>
-
         </View>
 
-        <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', marginTop: 20 }}>
-
-          <TouchableOpacity style={{ width: 97, height: 49, }}>
-            <View style={{ width: 97, height: 49, borderRadius: 7, backgroundColor: '#E56033', flexDirection: 'row' }}>
-              <Text style={{ color: 'white', fontSize: 13, fontFamily: 'Outfit-Regular', maxWidth: 65, textAlign: 'left', marginTop: 8, marginLeft: 2 }}>
+        <View
+          style={{
+            flexDirection: 'row',
+            justifyContent: 'space-evenly',
+            marginTop: 20,
+          }}>
+          <TouchableOpacity style={{width: 97, height: 49}}>
+            <View
+              style={{
+                width: 97,
+                height: 49,
+                borderRadius: 7,
+                backgroundColor: '#E56033',
+                flexDirection: 'row',
+              }}>
+              <Text
+                style={{
+                  color: 'white',
+                  fontSize: 13,
+                  fontFamily: 'Outfit-Regular',
+                  maxWidth: 65,
+                  textAlign: 'left',
+                  marginTop: 8,
+                  marginLeft: 2,
+                }}>
                 All Categories
               </Text>
               <Image
                 source={require('./assets/images/category.png')}
-                style={{ height: 24, width: 24, marginLeft: 5, marginTop: 14 }}
+                style={{height: 24, width: 24, marginLeft: 5, marginTop: 14}}
               />
             </View>
           </TouchableOpacity>
 
-
-          <TouchableOpacity style={{ width: 97, height: 49, }}>
-            <View style={{ width: 97, height: 49, borderRadius: 7, backgroundColor: '#242222', flexDirection: 'row' }}>
-              <Text style={{ color: 'white', fontSize: 13, fontFamily: 'Outfit-Regular', maxWidth: 40, textAlign: 'left', marginTop: 8, marginLeft: 12 }}>
+          <TouchableOpacity style={{width: 97, height: 49}}>
+            <View
+              style={{
+                width: 97,
+                height: 49,
+                borderRadius: 7,
+                backgroundColor: '#242222',
+                flexDirection: 'row',
+              }}>
+              <Text
+                style={{
+                  color: 'white',
+                  fontSize: 13,
+                  fontFamily: 'Outfit-Regular',
+                  maxWidth: 40,
+                  textAlign: 'left',
+                  marginTop: 8,
+                  marginLeft: 12,
+                }}>
                 On Sale
               </Text>
               <Image
                 source={require('./assets/images/radar-2.png')}
-                style={{ height: 24, width: 24, marginLeft: 25, marginTop: 14 }}
+                style={{height: 24, width: 24, marginLeft: 25, marginTop: 14}}
               />
             </View>
           </TouchableOpacity>
 
-
-          <TouchableOpacity style={{ width: 97, height: 49, }}>
-            <View style={{ width: 97, height: 49, borderRadius: 7, backgroundColor: '#242222', flexDirection: 'row' }}>
-              <Text style={{ color: 'white', fontSize: 13, fontFamily: 'Outfit-Regular', maxWidth: 40, textAlign: 'left', marginTop: 8, marginLeft: 12 }}>
+          <TouchableOpacity style={{width: 97, height: 49}}>
+            <View
+              style={{
+                width: 97,
+                height: 49,
+                borderRadius: 7,
+                backgroundColor: '#242222',
+                flexDirection: 'row',
+              }}>
+              <Text
+                style={{
+                  color: 'white',
+                  fontSize: 13,
+                  fontFamily: 'Outfit-Regular',
+                  maxWidth: 40,
+                  textAlign: 'left',
+                  marginTop: 8,
+                  marginLeft: 12,
+                }}>
                 Out of Stock
               </Text>
               <Image
                 source={require('./assets/images/shopping-bag.png')}
-                style={{ height: 24, width: 24, marginLeft: 12, marginTop: 14 }}
+                style={{height: 24, width: 24, marginLeft: 12, marginTop: 14}}
               />
             </View>
           </TouchableOpacity>
         </View>
 
-
-
-        <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', alignItems: 'center', marginTop: 40 }}>
-
+        <View
+          style={{
+            flexDirection: 'row',
+            justifyContent: 'space-evenly',
+            alignItems: 'center',
+            marginTop: 40,
+          }}>
           <TouchableOpacity>
-            <View style={{ height: 104, width: 100, backgroundColor: '#3F3F3F', borderRadius: 7, justifyContent: 'center' }}>
+            <View
+              style={{
+                height: 104,
+                width: 100,
+                backgroundColor: '#3F3F3F',
+                borderRadius: 7,
+                justifyContent: 'center',
+              }}>
               <Image
                 source={require('./assets/images/gpu.png')}
-                style={{ height: 39, width: 81, justifyContent: 'center', marginLeft: 8 }}
+                style={{
+                  height: 39,
+                  width: 81,
+                  justifyContent: 'center',
+                  marginLeft: 8,
+                }}
               />
-              <Text style={{ color: 'white', fontSize: 16, fontFamily: 'Outfit-Regular', textAlign: 'center', marginTop: 8 }}>
+              <Text
+                style={{
+                  color: 'white',
+                  fontSize: 16,
+                  fontFamily: 'Outfit-Regular',
+                  textAlign: 'center',
+                  marginTop: 8,
+                }}>
                 Rtx 3090
               </Text>
             </View>
           </TouchableOpacity>
 
           <TouchableOpacity>
-            <View style={{ height: 104, width: 100, backgroundColor: '#000000', borderRadius: 7, justifyContent: 'center', alignItems: 'center' }}>
+            <View
+              style={{
+                height: 104,
+                width: 100,
+                backgroundColor: '#000000',
+                borderRadius: 7,
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}>
               <Image
                 source={require('./assets/images/pc.png')}
-                style={{ height: 60, width: 54, justifyContent: 'center', marginLeft: 8 }}
+                style={{
+                  height: 60,
+                  width: 54,
+                  justifyContent: 'center',
+                  marginLeft: 8,
+                }}
               />
-              <Text style={{ color: 'white', fontSize: 16, fontFamily: 'Outfit-Regular', textAlign: 'center', marginTop: 8 }}>
+              <Text
+                style={{
+                  color: 'white',
+                  fontSize: 16,
+                  fontFamily: 'Outfit-Regular',
+                  textAlign: 'center',
+                  marginTop: 8,
+                }}>
                 PC
               </Text>
             </View>
           </TouchableOpacity>
-
         </View>
 
-        <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', alignItems: 'center', marginTop: 40 }}>
-
+        <View
+          style={{
+            flexDirection: 'row',
+            justifyContent: 'space-evenly',
+            alignItems: 'center',
+            marginTop: 40,
+          }}>
           <TouchableOpacity>
-            <View style={{ height: 104, width: 100, backgroundColor: '#3F3F3F', borderRadius: 7, justifyContent: 'center' }}>
+            <View
+              style={{
+                height: 104,
+                width: 100,
+                backgroundColor: '#3F3F3F',
+                borderRadius: 7,
+                justifyContent: 'center',
+              }}>
               <Image
                 source={require('./assets/images/gpu.png')}
-                style={{ height: 39, width: 81, justifyContent: 'center', marginLeft: 8 }}
+                style={{
+                  height: 39,
+                  width: 81,
+                  justifyContent: 'center',
+                  marginLeft: 8,
+                }}
               />
-              <Text style={{ color: 'white', fontSize: 16, fontFamily: 'Outfit-Regular', textAlign: 'center', marginTop: 8 }}>
+              <Text
+                style={{
+                  color: 'white',
+                  fontSize: 16,
+                  fontFamily: 'Outfit-Regular',
+                  textAlign: 'center',
+                  marginTop: 8,
+                }}>
                 Rtx 3090
               </Text>
             </View>
           </TouchableOpacity>
 
           <TouchableOpacity>
-            <View style={{ height: 104, width: 100, backgroundColor: '#000000', borderRadius: 7, justifyContent: 'center', alignItems: 'center' }}>
+            <View
+              style={{
+                height: 104,
+                width: 100,
+                backgroundColor: '#000000',
+                borderRadius: 7,
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}>
               <Image
                 source={require('./assets/images/pc.png')}
-                style={{ height: 60, width: 54, justifyContent: 'center', marginLeft: 8 }}
+                style={{
+                  height: 60,
+                  width: 54,
+                  justifyContent: 'center',
+                  marginLeft: 8,
+                }}
               />
-              <Text style={{ color: 'white', fontSize: 16, fontFamily: 'Outfit-Regular', textAlign: 'center', marginTop: 8 }}>
+              <Text
+                style={{
+                  color: 'white',
+                  fontSize: 16,
+                  fontFamily: 'Outfit-Regular',
+                  textAlign: 'center',
+                  marginTop: 8,
+                }}>
                 PC
               </Text>
             </View>
           </TouchableOpacity>
-
         </View>
 
-        <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', alignItems: 'center', marginTop: 40 }}>
-
+        <View
+          style={{
+            flexDirection: 'row',
+            justifyContent: 'space-evenly',
+            alignItems: 'center',
+            marginTop: 40,
+          }}>
           <TouchableOpacity>
-            <View style={{ height: 104, width: 100, backgroundColor: '#3F3F3F', borderRadius: 7, justifyContent: 'center' }}>
+            <View
+              style={{
+                height: 104,
+                width: 100,
+                backgroundColor: '#3F3F3F',
+                borderRadius: 7,
+                justifyContent: 'center',
+              }}>
               <Image
                 source={require('./assets/images/gpu.png')}
-                style={{ height: 39, width: 81, justifyContent: 'center', marginLeft: 8 }}
+                style={{
+                  height: 39,
+                  width: 81,
+                  justifyContent: 'center',
+                  marginLeft: 8,
+                }}
               />
-              <Text style={{ color: 'white', fontSize: 16, fontFamily: 'Outfit-Regular', textAlign: 'center', marginTop: 8 }}>
+              <Text
+                style={{
+                  color: 'white',
+                  fontSize: 16,
+                  fontFamily: 'Outfit-Regular',
+                  textAlign: 'center',
+                  marginTop: 8,
+                }}>
                 Rtx 3090
               </Text>
             </View>
           </TouchableOpacity>
 
           <TouchableOpacity>
-            <View style={{ height: 104, width: 100, backgroundColor: '#000000', borderRadius: 7, justifyContent: 'center', alignItems: 'center' }}>
+            <View
+              style={{
+                height: 104,
+                width: 100,
+                backgroundColor: '#000000',
+                borderRadius: 7,
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}>
               <Image
                 source={require('./assets/images/pc.png')}
-                style={{ height: 60, width: 54, justifyContent: 'center', marginLeft: 8 }}
+                style={{
+                  height: 60,
+                  width: 54,
+                  justifyContent: 'center',
+                  marginLeft: 8,
+                }}
               />
-              <Text style={{ color: 'white', fontSize: 16, fontFamily: 'Outfit-Regular', textAlign: 'center', marginTop: 8 }}>
+              <Text
+                style={{
+                  color: 'white',
+                  fontSize: 16,
+                  fontFamily: 'Outfit-Regular',
+                  textAlign: 'center',
+                  marginTop: 8,
+                }}>
                 PC
               </Text>
             </View>
           </TouchableOpacity>
-
         </View>
-
-
-
-      </ScrollView >
-    </View >
+      </ScrollView>
+    </View>
   );
 };
 
@@ -3036,27 +3629,27 @@ const App = () => {
         <Stack.Screen
           name="Welcome Screen"
           component={WelcomeScreen}
-          options={{ headerShown: false }}
+          options={{headerShown: false}}
         />
         <Stack.Screen
           name="Sign in Screen"
           component={SignInScreen}
-          options={{ headerShown: false }}
+          options={{headerShown: false}}
         />
         <Stack.Screen
           name="Sign up Screen"
           component={SignUpScreen}
-          options={{ headerShown: false }}
+          options={{headerShown: false}}
         />
         <Stack.Screen
           name="OTP Screen"
           component={OTPScreen}
-          options={{ headerShown: false }}
+          options={{headerShown: false}}
         />
         <Stack.Screen
           name="Cart Screen"
           component={CartScreen}
-          options={{ headerShown: false }}
+          options={{headerShown: false}}
         />
         {/*<Stack.Screen*/}
         {/*  name="OTP Screen"*/}
@@ -3076,12 +3669,12 @@ const App = () => {
         <Stack.Screen
           name="Choose Payment Method Screen"
           component={ChoosePaymentScreen}
-          options={{ headerShown: false }}
+          options={{headerShown: false}}
         />
         <Stack.Screen
           name="Add Payment Method Screen"
           component={AddPaymentScreen}
-          options={{ headerShown: false }}
+          options={{headerShown: false}}
         />
         {/*<Stack.Screen*/}
         {/*  name="OTP Screen"*/}
@@ -3091,19 +3684,53 @@ const App = () => {
         <Stack.Screen
           name="View Request Screen"
           component={ViewRequestScreen}
-          options={{ headerShown: false }}
+          options={{headerShown: false}}
         />
-        <Stack.Screen name="Add Products" component={AddProducts} options={{ headerShown: false }} />
-        <Stack.Screen name="Add To History" component={AddToHistory} options={{ headerShown: false }} />
-        <Stack.Screen name="Add To History (Image)" component={AddToHistoryImage} options={{ headerShown: false }} />
-        <Stack.Screen name="Add Products (manually)" component={AddProductsManually} options={{ headerShown: false }} />
-        <Stack.Screen name="Add To History Manually" component={AddToHistoryManually} options={{ headerShown: false }} />
-        <Stack.Screen name="Selling History" component={SellingHistory} options={{ headerShown: false }} />
-        <Stack.Screen name="Shopping History" component={ShoppingHistory} options={{ headerShown: false }} />
-        <Stack.Screen name="Add Products (Barcode)" component={AddProductsBarcode} options={{ headerShown: false }} />
-        <Stack.Screen name="Sell Products" component={SellProducts} options={{ headerShown: false }} />
-
-
+        <Stack.Screen
+          name="Add Products"
+          component={AddProducts}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Add To History"
+          component={AddToHistory}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Add To History (Image)"
+          component={AddToHistoryImage}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Add Products (manually)"
+          component={AddProductsManually}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Add To History Manually"
+          component={AddToHistoryManually}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Selling History"
+          component={SellingHistory}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Shopping History"
+          component={ShoppingHistory}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Add Products (Barcode)"
+          component={AddProductsBarcode}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Sell Products"
+          component={SellProducts}
+          options={{headerShown: false}}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -3147,7 +3774,7 @@ const styles = StyleSheet.create({
   buttonOrange: {
     justifyContent: 'center',
     height: 100,
-    backgroundColor: "#E56033",
+    backgroundColor: '#E56033',
     width: 261,
     borderRadius: 18,
   },
@@ -3162,7 +3789,7 @@ const styles = StyleSheet.create({
   buttonWhite: {
     justifyContent: 'center',
     height: 100,
-    backgroundColor: "white",
+    backgroundColor: 'white',
     width: 261,
     borderRadius: 18,
   },
